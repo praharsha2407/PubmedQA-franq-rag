@@ -65,7 +65,10 @@ class SpladeConfig:
 class HybridRetrievalConfig:
     dense_top_k: int = 20
     sparse_top_k: int = 20
-    final_top_k: int = 20  # fused pool BEFORE reranking; reranker cuts to rerank_top_k
+    # Fused pool handed to the reranker. dense (20) and sparse (20) can union to 40
+    # distinct chunks; truncating to 20 here discarded up to half the candidates
+    # before the cross-encoder ever scored them.
+    final_top_k: int = 40
     rrf_k: int = 60
 
 @dataclass(frozen=True)

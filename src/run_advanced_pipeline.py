@@ -24,6 +24,7 @@ from hybrid_retrieval import HybridRetriever
 from reranker import CrossEncoderReranker
 from keyword_extraction import KeywordExtractor
 from minimal_prompt import build_minimal_prompt
+from prompts import build_cot_rag_prompt
 from sentence_segmentation import segment_sentences
 from stage4_verification import (
     step_b_keyword_overlap,
@@ -80,7 +81,19 @@ def _enforce_strict_mode(config, sparse_retriever, reranker, generator) -> None:
     print("Strict mode: all stages using their intended components.")
 
 
-def run_advanced_pipeline(sample_size: int | None = None, strict: bool = False, resume: bool = False):
+def run_advanced_pipeline(
+    sample_size: int | None = None,
+    strict: bool = False,
+    resume: bool = False,
+    prompt_style: str = "minimal",
+):
+    # The baseline runs the CoT prompt; this pipeline defaults to the minimal one.
+    # Comparing the two as-is confounds "better architecture" with "different prompt",
+    # so --prompt cot exists to hold the prompt constant and vary only the architecture.
+    # Each style writes its own answers/report files so the two runs never collide.
+    build_prompt = build_minimal_prompt if prompt_style == "minimal" else build_cot_rag_prompt
+    suffix = "" if prompt_style == "minimal" else f"_{prompt_style}"
+
     config = AdvancedPipelineConfig()
 
     print("Initializing Pipeline Models...")
@@ -118,7 +131,8 @@ def run_advanced_pipeline(sample_size: int | None = None, strict: bool = False, 
 
     print("Starting pipeline processing...")
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
-    answers_path = OUTPUT_DIR / "advanced_answers.jsonl"
+    answers_path = OUTPUT_DIR / f"advanced_answers{suffix}.jsonl"
+    print(f"Prompt style: {prompt_style}  ->  {answers_path.name}")
 
     # A full run takes hours. Without --resume a killed job (walltime, maintenance,
     # preemption) loses every example. With it, completed pubids are read back and
@@ -161,8 +175,8 @@ def run_advanced_pipeline(sample_size: int | None = None, strict: bool = False, 
         # STAGE 6: keyword corpus
         keyword_corpus = keyword_extractor.build_keyword_corpus(top_k_chunks)
 
-        # STAGE 7: generation
-        prompt = build_minimal_prompt(question, top_k_chunks)
+        # STAGE 7: generation (prompt style selected by --prompt)
+        prompt = build_prompt(question, top_k_chunks)
         raw_answer = generator.generate(prompt)
 
         # STAGE 8: neural sentence segmentation (SaT, replaces NLTK)
@@ -177,18 +191,29 @@ def run_advanced_pipeline(sample_size: int | None = None, strict: bool = False, 
                 RetrievedChunk(text=sentence, score=0.0, metadata={"chunk_id": "", "doc_id": ""})
             )
 
-            best_chunk_id = None
+            # Keyword overlap is used ONLY as the extrinsic signal: does this sentence
+            # share any lexical anchor with ANY retrieved chunk? Strict '>' matters --
+            # with '>=' and max_overlap starting at 0.0, a sentence overlapping nothing
+            # made every chunk "win" in turn, leaving the LAST (lowest-ranked) chunk.
             max_overlap = 0.0
-            best_chunk_text = top_k_chunks[0].text if top_k_chunks else ""
-
             for chunk in top_k_chunks:
                 overlap = step_b_keyword_overlap(s_keywords, keyword_corpus.get(chunk.metadata["chunk_id"], []))
-                if overlap >= max_overlap:
+                if overlap > max_overlap:
                     max_overlap = overlap
-                    best_chunk_id = chunk.metadata["chunk_id"]
-                    best_chunk_text = chunk.text
 
-            nli_class, p_faithful = nli_model.classify_and_score(best_chunk_text, sentence)
+            # Faithfulness: a sentence is faithful if ANY retrieved chunk entails it, so
+            # score it against all of them and keep the strongest. Selecting a single
+            # premise by keyword overlap frequently handed the NLI model an unrelated
+            # chunk, which it (correctly) refused to entail -- inflating "logical".
+            best_chunk_id = None
+            nli_class = "neutral"
+            p_faithful = 0.0
+            for chunk in top_k_chunks:
+                cls, prob = nli_model.classify_and_score(chunk.text, sentence)
+                if prob > p_faithful:
+                    p_faithful = prob
+                    nli_class = cls
+                    best_chunk_id = chunk.metadata["chunk_id"]
 
             p_true_given_unfaithful = parametric_knowledge.compute_without_context(question, sentence)
             p_true_given_faithful = 0.95
@@ -267,7 +292,7 @@ def run_advanced_pipeline(sample_size: int | None = None, strict: bool = False, 
             scored += 1
     print(f"Scoring {scored} completed examples.")
 
-    evaluator.compute_and_save()
+    evaluator.compute_and_save(OUTPUT_DIR / f"full_evaluation_report{suffix}.json")
 
     print("\nPipeline execution complete. Results saved.")
 
@@ -288,5 +313,15 @@ if __name__ == "__main__":
         help="Skip examples already present in outputs/advanced_answers.jsonl and append new ones. "
              "Use this to continue a run that was killed by walltime or maintenance.",
     )
+    parser.add_argument(
+        "--prompt", choices=["minimal", "cot"], default="minimal",
+        help="Which prompt Stage 7 uses. 'minimal' (default) is the unconstrained prompt; "
+             "'cot' is the same chain-of-thought prompt the baseline uses. Run with 'cot' to "
+             "compare against the baseline with the prompt held constant, so any difference is "
+             "attributable to the architecture rather than the prompt. Writes "
+             "advanced_answers_cot.jsonl / full_evaluation_report_cot.json.",
+    )
     args = parser.parse_args()
-    run_advanced_pipeline(sample_size=args.sample_size, strict=args.strict, resume=args.resume)
+    run_advanced_pipeline(
+        sample_size=args.sample_size, strict=args.strict, resume=args.resume, prompt_style=args.prompt
+    )
