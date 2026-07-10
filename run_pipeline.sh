@@ -1,0 +1,12 @@
+#!/bin/bash
+#SBATCH --job-name=baseline_rag
+#SBATCH --output=logs_baseline_%j.out
+#SBATCH --partition=gpu     
+#SBATCH --gres=gpu:1        
+#SBATCH --mem=32G           
+#SBATCH --time=12:00:00     
+
+source /home/users/pkonda/miniconda3/etc/profile.d/conda.sh
+conda activate rag_thesis
+
+python src/run_pipeline.py --full-dataset
