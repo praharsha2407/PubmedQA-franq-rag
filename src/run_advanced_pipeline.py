@@ -88,6 +88,7 @@ def run_advanced_pipeline(
     resume: bool = False,
     prompt_style: str = "minimal",
     use_reranker: bool = False,
+    constant_faithful_prior: bool = False,
 ):
     # The baseline runs the CoT prompt; this pipeline defaults to the minimal one.
     # Comparing the two as-is confounds "better architecture" with "different prompt",
@@ -153,6 +154,10 @@ def run_advanced_pipeline(
         "final_top_k": config.hybrid_retrieval.final_top_k,
         "rerank_top_k": config.reranker.rerank_top_k,
         "faithfulness": "max_entailment_over_all_chunks",
+        "p_true_given_faithful": (
+            f"constant_{config.franq.p_true_given_faithful}" if constant_faithful_prior
+            else "max_claim_probability"
+        ),
     }
 
     done_pubids: set[str] = set()
@@ -226,6 +231,8 @@ def run_advanced_pipeline(
         sentences = segment_sentences(raw_answer, config.segmentation)
 
         # STAGE 9: verification
+        # The evidence string for P(true | faithful); built once, not once per sentence.
+        context_for_franq = "\n".join(chunk.text for chunk in top_k_chunks)
         sentence_results = []
         answer_franq_scores = []
 
@@ -259,7 +266,17 @@ def run_advanced_pipeline(
                     best_chunk_id = chunk.metadata["chunk_id"]
 
             p_true_given_unfaithful = parametric_knowledge.compute_without_context(question, sentence)
-            p_true_given_faithful = 0.95
+
+            # P(true | faithful). The FRANQ paper estimates this per claim (Max Claim
+            # Probability, p(c|x,r)) because a claim can be faithful to the evidence and
+            # still answer the question wrongly. The original constant 0.95 is kept behind
+            # a flag so that variant remains reproducible as an ablation row.
+            if constant_faithful_prior:
+                p_true_given_faithful = config.franq.p_true_given_faithful
+            else:
+                p_true_given_faithful = parametric_knowledge.compute_with_context(
+                    question, context_for_franq, sentence
+                )
 
             raw_franq = step_f_franq_formula(p_faithful, p_true_given_faithful, p_true_given_unfaithful)
             answer_franq_scores.append(raw_franq)
@@ -382,8 +399,15 @@ if __name__ == "__main__":
              "cross-encoder lowers MAP below the dense-only baseline (0.750 vs 0.761 held-out), "
              "while RRF fusion alone raises it to 0.777. See src/ablate_retrieval.py.",
     )
+    parser.add_argument(
+        "--constant-faithful-prior", action="store_true",
+        help="Use the fixed P(true|faithful)=0.95 instead of the paper's per-claim Max Claim "
+             "Probability p(c|x,r). Reproduces the earlier runs as an ablation row; not the "
+             "faithful reading of Fadeeva et al. (2025).",
+    )
     args = parser.parse_args()
     run_advanced_pipeline(
         sample_size=args.sample_size, strict=args.strict, resume=args.resume,
         prompt_style=args.prompt, use_reranker=args.rerank,
+        constant_faithful_prior=args.constant_faithful_prior,
     )

@@ -98,6 +98,43 @@ class StepE_ParametricKnowledge:
         self.model = generator_model
         self.tokenizer = generator_tokenizer
 
+    def _mean_token_prob(self, prompt: str, generated_sentence: str) -> float:
+        """Average probability the model assigns to the sentence's tokens, given `prompt`.
+
+        Shared by both branches of the FRANQ decomposition. What differs between them is
+        only what goes in the prompt: with the retrieved context, or without it.
+        """
+        if self.model is None or self.tokenizer is None:
+            # Fallback if Mistral failed to load (e.g., testing on CPU)
+            return 0.5
+
+        prompt_ids = self.tokenizer(prompt, return_tensors="pt").input_ids
+        sentence_ids = self.tokenizer(generated_sentence, return_tensors="pt", add_special_tokens=False).input_ids
+        if sentence_ids.shape[-1] == 0:
+            return 0.5
+
+        input_ids = torch.cat([prompt_ids, sentence_ids], dim=-1).to(self.model.device)
+        with torch.no_grad():
+            logits = self.model(input_ids).logits
+
+        # Shift so position i predicts token i+1: the slice covers exactly the sentence.
+        shift_logits = logits[0, prompt_ids.shape[1] - 1 : -1, :]
+        probs = torch.softmax(shift_logits, dim=-1)
+        token_probs = [probs[i, tok].item() for i, tok in enumerate(sentence_ids[0])]
+        return sum(token_probs) / len(token_probs) if token_probs else 0.5
+
+    def compute_with_context(self, question: str, context: str, generated_sentence: str) -> float:
+        """P(true | faithful), the FRANQ paper's "Max Claim Probability" p(c | x, r).
+
+        The paper (Fadeeva et al., 2025, Sec. 2.2) estimates this per claim rather than
+        fixing it: a claim can be faithful to the evidence and still answer the question
+        wrongly -- the model may, for instance, latch onto the wrong entity mentioned in
+        the retrieved passage. A hardcoded constant removes exactly the failure mode this
+        term exists to detect, which is the "logical" hallucination category.
+        """
+        prompt = f"Context:\n{context}\n\nQuestion:\n{question}\n\nAnswer:\n"
+        return self._mean_token_prob(prompt, generated_sentence)
+
     def compute_without_context(self, question: str, generated_sentence: str) -> float:
         """
         Re-runs Mistral forward pass WITHOUT context to read token logits.

@@ -42,3 +42,4 @@ backups/
 .smoke_jobid
 .strict_jobid
 nettest.sh
+scratch/
