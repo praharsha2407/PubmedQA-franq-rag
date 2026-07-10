@@ -29,9 +29,12 @@ class MistralGenerator:
 
         try:
             import torch
-            from transformers import AutoModelForCausalLM, AutoTokenizer, BitsAndBytesConfig
+            from transformers import AutoModelForCausalLM, AutoTokenizer, BitsAndBytesConfig, set_seed
 
             self.torch = torch
+            # Seed every RNG (Python, NumPy, torch CPU+CUDA) before anything samples.
+            # Sampled decoding (do_sample=True) is otherwise nondeterministic across runs.
+            set_seed(config.seed)
             self.tokenizer = AutoTokenizer.from_pretrained(config.model_name)
             if self.tokenizer.pad_token is None:
                 self.tokenizer.pad_token = self.tokenizer.eos_token
@@ -61,13 +64,17 @@ class MistralGenerator:
         if os.environ.get("MISTRAL_FALLBACK", "") in ("1", "true", "True"):
             self.using_fallback_generator = True
 
-    def generate(self, prompt: str, max_new_tokens: int | None = None) -> str:
+    def generate(self, prompt: str, max_new_tokens: int | None = None, greedy: bool = False) -> str:
         # max_new_tokens overrides the configured default for a single call. Stage 1
         # query expansion (llm_query_expansion.py) needs a much shorter budget than
         # Stage 7 answer generation, and reuses this same loaded model.
+        # greedy=True forces deterministic decoding regardless of temperature -- used by
+        # the decision-elicitation step, where we want one fixed word (yes/no/maybe), not
+        # a sampled one.
         if self.using_fallback_generator:
             return self._fallback_generate(prompt)
 
+        do_sample = (not greedy) and self.config.temperature > 0
         messages = [{"role": "user", "content": prompt}]
         text = self.tokenizer.apply_chat_template(
             messages,
@@ -79,9 +86,9 @@ class MistralGenerator:
             outputs = self.model.generate(
                 **inputs,
                 max_new_tokens=max_new_tokens or self.config.max_new_tokens,
-                do_sample=self.config.temperature > 0,
-                temperature=self.config.temperature,
-                top_p=self.config.top_p,
+                do_sample=do_sample,
+                temperature=self.config.temperature if do_sample else None,
+                top_p=self.config.top_p if do_sample else None,
                 pad_token_id=self.tokenizer.eos_token_id,
         )
         generated = outputs[0][inputs["input_ids"].shape[-1] :]

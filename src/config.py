@@ -27,6 +27,11 @@ class GenerationConfig:
     temperature: float = 0.2
     top_p: float = 0.9
     load_in_4bit: bool = True
+    # Seed for reproducible sampled decoding. With do_sample=True and no seed the
+    # same (prompt, model) produced different answers across runs -- that is why the
+    # baseline's stored answers.jsonl (Conclusion in 200/200) could not be reproduced
+    # by re-running the same code path. Fixed here so runs are comparable.
+    seed: int = 42
 
 @dataclass(frozen=True)
 class PipelineConfig:

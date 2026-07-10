@@ -42,10 +42,22 @@ date +"=== end: %F %T ==="
 echo "=== exit: $RC ==="
 
 if [ $RC -eq 0 ]; then
-  echo "=== scoring the PubMedQA decision (raw vs raw) ==="
+  echo "=== scoring the PubMedQA decision (volunteered Conclusion line, raw vs raw) ==="
   python src/evaluate_decision.py \
       --answers outputs_cot/advanced_answers_cot.jsonl \
       --field raw_answer \
       --out outputs_cot/decision_metrics_cot.json
+
+  echo "=== explicit decision elicitation (greedy, one word per answer) ==="
+  python -u src/elicit_decisions.py \
+      --answers outputs_cot/advanced_answers_cot.jsonl \
+      --text-field raw_answer \
+      --out outputs_cot/advanced_answers_cot.elicited.jsonl
+
+  echo "=== scoring the PubMedQA decision (elicited, the headline number) ==="
+  python src/evaluate_decision.py \
+      --answers outputs_cot/advanced_answers_cot.elicited.jsonl \
+      --field elicited_decision \
+      --out outputs_cot/decision_metrics_cot_elicited.json
 fi
 exit $RC
