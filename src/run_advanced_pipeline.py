@@ -251,6 +251,13 @@ def run_advanced_pipeline(
             "question": example.question,
             "expanded_query": expanded_query,
             "generated_answer": final_answer,
+            # The raw pre-verification output. The baseline stores its raw output as
+            # generated_answer, so scoring the PubMedQA yes/no/maybe decision against
+            # our post-verification text compares two different things: verification can
+            # drop or reshape the "Conclusion: ..." sentence before it is ever read.
+            "raw_answer": raw_answer,
+            # Gold label, so the decision metric never has to re-load the dataset.
+            "final_decision": example.final_decision,
             "reference_answer": example.long_answer,
             "retrieved_chunk_ids": retrieved_ids,
             "hallucination_report": report,
