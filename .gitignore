@@ -19,7 +19,10 @@ models/
 # --- pipeline outputs (regenerable). advanced_answers.jsonl is the run
 #     checkpoint; it lives on disk and in archive/checkpoints, not in git ---
 outputs/
+outputs_v2/
 outputs_sample/
+outputs_v2_sample/
+outputs_cot_sample/
 outputs_test/
 *.jsonl.tmp
 
