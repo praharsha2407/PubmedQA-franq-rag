@@ -144,18 +144,49 @@ def run_advanced_pipeline(
     # A full run takes hours. Without --resume a killed job (walltime, maintenance,
     # preemption) loses every example. With it, completed pubids are read back and
     # skipped, and new rows are appended.
+    run_fingerprint = {
+        "prompt_style": prompt_style,
+        "reranker_enabled": bool(config.reranker.enabled or use_reranker),
+        "reranker_model": config.reranker.model_name,
+        "sparse_model": config.splade.model_name,
+        "dense_model": config.retrieval.embedding_model,
+        "final_top_k": config.hybrid_retrieval.final_top_k,
+        "rerank_top_k": config.reranker.rerank_top_k,
+        "faithfulness": "max_entailment_over_all_chunks",
+    }
+
     done_pubids: set[str] = set()
     if resume and answers_path.exists():
+        prior_fingerprints: list[dict] = []
         with open(answers_path, encoding="utf-8") as f:
             for line in f:
                 line = line.strip()
                 if not line:
                     continue
                 try:
-                    done_pubids.add(str(json.loads(line)["pubid"]))
-                except (json.JSONDecodeError, KeyError):
+                    row = json.loads(line)
+                except json.JSONDecodeError:
                     # A truncated final line is expected if the job was killed mid-write.
                     print("  (skipping one malformed/truncated row while resuming)")
+                    continue
+                done_pubids.add(str(row["pubid"]))
+                if "run_config" in row:
+                    prior_fingerprints.append(row["run_config"])
+
+        mismatched = [fp for fp in prior_fingerprints if fp != run_fingerprint]
+        if mismatched:
+            print("\n" + "!" * 72, file=sys.stderr)
+            print("REFUSING TO RESUME: the existing rows were produced by a different", file=sys.stderr)
+            print("configuration. Appending would mix two systems into one results file.", file=sys.stderr)
+            print(f"\n  existing: {mismatched[0]}", file=sys.stderr)
+            print(f"  current : {run_fingerprint}", file=sys.stderr)
+            print("\nEither match the old settings (e.g. --rerank / --prompt), or start a fresh", file=sys.stderr)
+            print("run into a new PUBMEDQA_OUTPUT_DIR.", file=sys.stderr)
+            print("!" * 72 + "\n", file=sys.stderr)
+            raise SystemExit(3)
+
+        if done_pubids and not prior_fingerprints:
+            print("  WARNING: existing rows predate config fingerprinting; their settings are unknown.")
         print(f"Resuming: {len(done_pubids)} examples already complete, skipping them.")
 
     answers_file = open(answers_path, "a" if resume else "w", encoding="utf-8")
@@ -274,6 +305,11 @@ def run_advanced_pipeline(
             "retrieved_chunk_ids": retrieved_ids,
             "hallucination_report": report,
             "mean_franq_score": mean_franq,
+            # Provenance. A --resume run picks up whatever config.py currently says, which
+            # is not necessarily what produced the earlier rows. Recording the settings that
+            # actually generated each row makes a mixed-configuration file detectable instead
+            # of silently averaging two different systems into one results table.
+            "run_config": run_fingerprint,
         }
         answers_file.write(json.dumps(answer_record) + "\n")
         answers_file.flush()
