@@ -76,6 +76,16 @@ class RerankerConfig:
     # Cross-encoder reranking (Reimers & Gurevych, 2019, Sentence-BERT --
     # cross-encoder variant). Reads (query, chunk) jointly for a more
     # accurate relevance score than the fusion step alone provides.
+    #
+    # DISABLED BY DEFAULT on the evidence of src/ablate_retrieval.py. This
+    # checkpoint is trained on MS MARCO web-search relevance and degrades
+    # retrieval on PubMedQA abstracts. Measured MAP, dev(n=300)/held-out(n=700):
+    #     dense only            0.7420 / 0.7608   (the baseline)
+    #     RRF fusion, no rerank 0.7692 / 0.7768   <- best, and what we now use
+    #     RRF + this reranker   0.7308 / 0.7503   <- worse than the baseline
+    # Re-enable with --rerank to reproduce the ablation. A biomedical
+    # cross-encoder (e.g. ncbi/MedCPT-Cross-Encoder) may well win; untested.
+    enabled: bool = False
     model_name: str = "cross-encoder/ms-marco-MiniLM-L-6-v2"
     rerank_top_k: int = 5
 

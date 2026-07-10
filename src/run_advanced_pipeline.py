@@ -55,7 +55,8 @@ def _enforce_strict_mode(config, sparse_retriever, reranker, generator) -> None:
 
     if getattr(sparse_retriever, "using_fallback", False):
         problems.append("Stage 3: SPLADE-v3 unavailable, fell back to BM25")
-    if getattr(reranker, "using_fallback", False):
+    # reranker is None when deliberately disabled, which is not a silent fallback.
+    if reranker is not None and getattr(reranker, "using_fallback", False):
         problems.append("Stage 5: cross-encoder reranker unavailable, ranking passed through unchanged")
     if getattr(generator, "using_fallback_generator", False):
         problems.append("Stage 7: BioMistral-7B unavailable, using the stub generator")
@@ -86,6 +87,7 @@ def run_advanced_pipeline(
     strict: bool = False,
     resume: bool = False,
     prompt_style: str = "minimal",
+    use_reranker: bool = False,
 ):
     # The baseline runs the CoT prompt; this pipeline defaults to the minimal one.
     # Comparing the two as-is confounds "better architecture" with "different prompt",
@@ -100,7 +102,12 @@ def run_advanced_pipeline(
     dense_retriever = DenseRetriever(config.retrieval)
     sparse_retriever = SpladeRetriever(config.splade)  # Stage 3: SPLADE, not BM25
     hybrid_retriever = HybridRetriever(dense_retriever, sparse_retriever, config.hybrid_retrieval)
-    reranker = CrossEncoderReranker(config.reranker)  # Stage 5: new
+    if config.reranker.enabled or use_reranker:
+        reranker = CrossEncoderReranker(config.reranker)  # Stage 5
+    else:
+        reranker = None
+        print("Stage 5: cross-encoder reranking DISABLED (RerankerConfig.enabled=False); "
+              "using the RRF-fused ranking directly.")
     keyword_extractor = KeywordExtractor(config.keyword)
     generator = MistralGenerator(config.generation)
 
@@ -165,8 +172,13 @@ def run_advanced_pipeline(
         # STAGES 2-4: dense + SPLADE retrieval, fused by RRF -> top-20 pool
         fused_chunks = hybrid_retriever.search(expanded_query)
 
-        # STAGE 5: cross-encoder reranking -> top-5
-        top_k_chunks = reranker.rerank(question, fused_chunks)
+        # STAGE 5: cross-encoder reranking -> top-5, or straight off the fused ranking
+        # when disabled (see RerankerConfig.enabled: the MS MARCO cross-encoder
+        # measurably degrades retrieval on this corpus).
+        if reranker is not None:
+            top_k_chunks = reranker.rerank(question, fused_chunks)
+        else:
+            top_k_chunks = fused_chunks[: config.reranker.rerank_top_k]
 
         # Retrieval metrics are scored later, from the answers file (see below), on the
         # FINAL reranked top-K since that is what actually reaches generation.
@@ -328,7 +340,14 @@ if __name__ == "__main__":
              "attributable to the architecture rather than the prompt. Writes "
              "advanced_answers_cot.jsonl / full_evaluation_report_cot.json.",
     )
+    parser.add_argument(
+        "--rerank", action="store_true",
+        help="Re-enable Stage 5 cross-encoder reranking. Off by default: on PubMedQA the MS MARCO "
+             "cross-encoder lowers MAP below the dense-only baseline (0.750 vs 0.761 held-out), "
+             "while RRF fusion alone raises it to 0.777. See src/ablate_retrieval.py.",
+    )
     args = parser.parse_args()
     run_advanced_pipeline(
-        sample_size=args.sample_size, strict=args.strict, resume=args.resume, prompt_style=args.prompt
+        sample_size=args.sample_size, strict=args.strict, resume=args.resume,
+        prompt_style=args.prompt, use_reranker=args.rerank,
     )
