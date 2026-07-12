@@ -16,6 +16,7 @@ Stage 11: Consolidated evaluation (retrieval + generation + FRANQ)  -- full_eval
 import argparse
 import json
 import sys
+from dataclasses import replace
 
 from config import AdvancedPipelineConfig, OUTPUT_DIR
 from query_expansion_final import expand_query_synonyms_and_related_terms
@@ -89,6 +90,7 @@ def run_advanced_pipeline(
     prompt_style: str = "minimal",
     use_reranker: bool = False,
     constant_faithful_prior: bool = False,
+    model_name: str | None = None,
 ):
     # The baseline runs the CoT prompt; this pipeline defaults to the minimal one.
     # Comparing the two as-is confounds "better architecture" with "different prompt",
@@ -98,6 +100,16 @@ def run_advanced_pipeline(
     suffix = "" if prompt_style == "minimal" else f"_{prompt_style}"
 
     config = AdvancedPipelineConfig()
+
+    # The generator LLM must be selectable, and must be recorded. It was neither.
+    # run_pipeline.py (the baseline) defaults to mistralai/Mistral-7B-Instruct-v0.3 via its
+    # own argparse, while GenerationConfig defaults to BioMistral/BioMistral-7B -- so the
+    # baseline and this pipeline silently ran DIFFERENT LLMs, and every baseline-vs-advanced
+    # number was a model comparison, not an architecture comparison. Pass --model-name to hold
+    # the generator constant.
+    if model_name:
+        config = replace(config, generation=replace(config.generation, model_name=model_name))
+    print(f"Stage 7 generator: {config.generation.model_name}")
 
     print("Initializing Pipeline Models...")
     dense_retriever = DenseRetriever(config.retrieval)
@@ -147,6 +159,11 @@ def run_advanced_pipeline(
     # skipped, and new rows are appended.
     run_fingerprint = {
         "prompt_style": prompt_style,
+        # The generator was NOT recorded before. Its absence is what allowed the baseline
+        # (Mistral-7B-Instruct-v0.3) and this pipeline (BioMistral-7B) to run different LLMs
+        # unnoticed across every comparison. Never omit it again.
+        "generator_model": config.generation.model_name,
+        "seed": config.generation.seed,
         "reranker_enabled": bool(config.reranker.enabled or use_reranker),
         "reranker_model": config.reranker.model_name,
         "sparse_model": config.splade.model_name,
@@ -405,9 +422,17 @@ if __name__ == "__main__":
              "Probability p(c|x,r). Reproduces the earlier runs as an ablation row; not the "
              "faithful reading of Fadeeva et al. (2025).",
     )
+    parser.add_argument(
+        "--model-name", default=None,
+        help="Stage 7 generator LLM. Defaults to GenerationConfig (BioMistral/BioMistral-7B). "
+             "The baseline (run_pipeline.py) defaults to mistralai/Mistral-7B-Instruct-v0.3, so "
+             "the two systems ran DIFFERENT models and no past baseline-vs-advanced number was a "
+             "clean architecture comparison. Pass the baseline's model here to hold it constant.",
+    )
     args = parser.parse_args()
     run_advanced_pipeline(
         sample_size=args.sample_size, strict=args.strict, resume=args.resume,
         prompt_style=args.prompt, use_reranker=args.rerank,
         constant_faithful_prior=args.constant_faithful_prior,
+        model_name=args.model_name,
     )
