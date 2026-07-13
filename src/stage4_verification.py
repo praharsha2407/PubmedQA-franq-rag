@@ -1,3 +1,5 @@
+import re
+
 import nltk
 from nltk.tokenize import sent_tokenize
 import torch
@@ -27,11 +29,59 @@ def step_a_sentence_decomposition(raw_answer: str) -> list[str]:
 # Step B: Keyword Overlap (ALGORITHM)
 # ------------------------------------------
 def step_b_keyword_overlap(sentence_keywords: list[str], chunk_keywords: list[str]) -> float:
-    """Computes |K_sent ∩ K_ctx| / |K_sent|"""
+    """Computes |K_sent ∩ K_ctx| / |K_sent|.
+
+    LEGACY. Kept so the original run remains reproducible as an ablation row, but it is
+    not the metric used any more -- see step_b_keyword_overlap_text below for why.
+    """
     if not sentence_keywords:
         return 0.0
     intersection = set(sentence_keywords).intersection(set(chunk_keywords))
     return len(intersection) / len(sentence_keywords)
+
+
+_STOPWORDS = frozenset(
+    "the a an of in on for and or to is are was were be been being with by that this these "
+    "those it its as at from not no but if then than so such can may might will would "
+    "have has had do does did we our their there which who whom when where what how".split()
+)
+
+
+def _content_tokens(text: str) -> set[str]:
+    """Content words of `text`, lowercased, stopwords and very short tokens dropped."""
+    return {
+        token
+        for token in re.findall(r"[a-z0-9][a-z0-9\-]*", text.lower())
+        if token not in _STOPWORDS and len(token) > 2
+    }
+
+
+def step_b_keyword_overlap_text(sentence_keywords: list[str], chunk_text: str) -> float:
+    """Fraction of the sentence's keyword TOKENS that appear in the chunk's FULL text.
+
+    This replaces the legacy exact-phrase overlap, which had two defects that together made
+    the extrinsic signal fire spuriously:
+
+      1. It matched KeyBERT *phrases* by exact string equality, so "long-term results" and
+         "long-term outcome" did not match -- two independently extracted keyphrase sets
+         almost never share an exact string.
+      2. It compared against only the chunk's top-10 keyphrases, discarding the rest of the
+         abstract. A sentence whose content was literally present in the chunk still scored
+         zero if it was not among those ten phrases.
+
+    The signal this step exists to provide is "does this sentence share ANY lexical anchor
+    with the retrieved evidence?" -- i.e. was it invented from nowhere (extrinsic). Matching
+    content tokens against the full chunk text answers that question; matching phrase strings
+    against a 10-item summary does not.
+    """
+    if not sentence_keywords:
+        return 0.0
+    sentence_tokens: set[str] = set()
+    for keyword in sentence_keywords:
+        sentence_tokens |= _content_tokens(keyword)
+    if not sentence_tokens:
+        return 0.0
+    return len(sentence_tokens & _content_tokens(chunk_text)) / len(sentence_tokens)
 
 # ------------------------------------------
 # Step C: AlignScore MODEL (from FRANQ)

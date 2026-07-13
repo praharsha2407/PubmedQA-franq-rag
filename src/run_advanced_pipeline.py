@@ -28,7 +28,7 @@ from minimal_prompt import build_minimal_prompt
 from prompts import build_cot_rag_prompt
 from sentence_segmentation import segment_sentences
 from stage4_verification import (
-    step_b_keyword_overlap,
+    step_b_keyword_overlap_text,
     StepD_NLI,
     StepE_ParametricKnowledge,
     step_f_franq_formula,
@@ -262,9 +262,14 @@ def run_advanced_pipeline(
             # share any lexical anchor with ANY retrieved chunk? Strict '>' matters --
             # with '>=' and max_overlap starting at 0.0, a sentence overlapping nothing
             # made every chunk "win" in turn, leaving the LAST (lowest-ranked) chunk.
+            # Matched against the chunk's FULL TEXT, not its top-10 keyphrases, and at the
+            # token level rather than by exact phrase equality. The old metric compared two
+            # independently-extracted KeyBERT phrase sets by string identity against a 10-item
+            # summary of the chunk, so it returned 0 for sentences whose content was plainly
+            # present in the evidence -- branding them "extrinsic" (invented) when they were not.
             max_overlap = 0.0
             for chunk in top_k_chunks:
-                overlap = step_b_keyword_overlap(s_keywords, keyword_corpus.get(chunk.metadata["chunk_id"], []))
+                overlap = step_b_keyword_overlap_text(s_keywords, chunk.text)
                 if overlap > max_overlap:
                     max_overlap = overlap
 
@@ -308,6 +313,10 @@ def run_advanced_pipeline(
                     verdict = "logical"
 
             sentence_results.append({
+                # Persisted so the keyword-grounding metric can be computed from the answers
+                # file instead of being conflated with the verified rate (see stage6_evaluation).
+                "keyword_overlap": max_overlap,
+                "nli_class": nli_class,
                 "sentence": sentence,
                 "cited_chunk": best_chunk_id if verdict == "verified" else None,
                 "verdict": verdict,
