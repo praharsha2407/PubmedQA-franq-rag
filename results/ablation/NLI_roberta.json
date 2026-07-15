@@ -1,0 +1,5022 @@
+{
+  "config": {
+    "splitter": "sat",
+    "keywords": "keybert",
+    "nli": "roberta-large-mnli"
+  },
+  "answers": 1000,
+  "sentences": 6542,
+  "mean_sentences_per_answer": 6.542,
+  "verified_rate": 0.11540813206970345,
+  "hallucination_rate": 0.8845918679302965,
+  "rates": {
+    "verified": 0.11540813206970345,
+    "intrinsic": 0.03836747172118618,
+    "extrinsic": 0.31045551819015593,
+    "logical": 0.5357688780189545
+  },
+  "franq_factuality": 0.45442009091234353,
+  "keyword_grounding": 0.5079176945884352,
+  "per_answer": [
+    {
+      "pubid": "21645374",
+      "mean_franq": 0.5926925347195099,
+      "sentences": 6
+    },
+    {
+      "pubid": "16418930",
+      "mean_franq": 0.7008630351446037,
+      "sentences": 4
+    },
+    {
+      "pubid": "9488747",
+      "mean_franq": 0.38717880638955887,
+      "sentences": 12
+    },
+    {
+      "pubid": "17208539",
+      "mean_franq": 0.401098963748361,
+      "sentences": 6
+    },
+    {
+      "pubid": "10808977",
+      "mean_franq": 0.37632488998887903,
+      "sentences": 5
+    },
+    {
+      "pubid": "23831910",
+      "mean_franq": 0.4903992202969705,
+      "sentences": 5
+    },
+    {
+      "pubid": "26037986",
+      "mean_franq": 0.5196350837666273,
+      "sentences": 5
+    },
+    {
+      "pubid": "26852225",
+      "mean_franq": 0.37212502183494944,
+      "sentences": 7
+    },
+    {
+      "pubid": "17113061",
+      "mean_franq": 0.42650179443478975,
+      "sentences": 6
+    },
+    {
+      "pubid": "10966337",
+      "mean_franq": 0.39012171575350996,
+      "sentences": 6
+    },
+    {
+      "pubid": "25432938",
+      "mean_franq": 0.447980015226124,
+      "sentences": 3
+    },
+    {
+      "pubid": "18847643",
+      "mean_franq": 0.3560938303981883,
+      "sentences": 11
+    },
+    {
+      "pubid": "18239988",
+      "mean_franq": 0.46984097154655724,
+      "sentences": 4
+    },
+    {
+      "pubid": "25957366",
+      "mean_franq": 0.3529753705884796,
+      "sentences": 13
+    },
+    {
+      "pubid": "24866606",
+      "mean_franq": 0.4335166784216392,
+      "sentences": 5
+    },
+    {
+      "pubid": "26578404",
+      "mean_franq": 0.3130530550424329,
+      "sentences": 17
+    },
+    {
+      "pubid": "11729377",
+      "mean_franq": 0.2646822215136886,
+      "sentences": 11
+    },
+    {
+      "pubid": "17096624",
+      "mean_franq": 0.4323994272484212,
+      "sentences": 4
+    },
+    {
+      "pubid": "22694248",
+      "mean_franq": 0.39947825487491867,
+      "sentences": 6
+    },
+    {
+      "pubid": "22990761",
+      "mean_franq": 0.4890526001505513,
+      "sentences": 6
+    },
+    {
+      "pubid": "19394934",
+      "mean_franq": 0.5007254310176104,
+      "sentences": 5
+    },
+    {
+      "pubid": "11481599",
+      "mean_franq": 0.4888722015765963,
+      "sentences": 4
+    },
+    {
+      "pubid": "21669959",
+      "mean_franq": 0.5472816722876431,
+      "sentences": 4
+    },
+    {
+      "pubid": "23806388",
+      "mean_franq": 0.6630218932929342,
+      "sentences": 4
+    },
+    {
+      "pubid": "17919952",
+      "mean_franq": 0.34868711138979575,
+      "sentences": 7
+    },
+    {
+      "pubid": "10966943",
+      "mean_franq": 0.4501258779472404,
+      "sentences": 3
+    },
+    {
+      "pubid": "23690198",
+      "mean_franq": 0.43884747893994414,
+      "sentences": 4
+    },
+    {
+      "pubid": "17940352",
+      "mean_franq": 0.4640462595211166,
+      "sentences": 9
+    },
+    {
+      "pubid": "20537205",
+      "mean_franq": 0.5017420700008575,
+      "sentences": 8
+    },
+    {
+      "pubid": "28707539",
+      "mean_franq": 0.5478037063160905,
+      "sentences": 3
+    },
+    {
+      "pubid": "7482275",
+      "mean_franq": 0.642987601668318,
+      "sentences": 4
+    },
+    {
+      "pubid": "24183388",
+      "mean_franq": 0.3615340892734909,
+      "sentences": 10
+    },
+    {
+      "pubid": "9645785",
+      "mean_franq": 0.4091044756812526,
+      "sentences": 3
+    },
+    {
+      "pubid": "26298839",
+      "mean_franq": 0.4092270861226585,
+      "sentences": 13
+    },
+    {
+      "pubid": "24153338",
+      "mean_franq": 0.6430091681466742,
+      "sentences": 4
+    },
+    {
+      "pubid": "18534072",
+      "mean_franq": 0.37600200571564374,
+      "sentences": 6
+    },
+    {
+      "pubid": "8847047",
+      "mean_franq": 0.41915064528696894,
+      "sentences": 6
+    },
+    {
+      "pubid": "10575390",
+      "mean_franq": 0.49802108328017974,
+      "sentences": 7
+    },
+    {
+      "pubid": "20084845",
+      "mean_franq": 0.5100319032993801,
+      "sentences": 4
+    },
+    {
+      "pubid": "15703931",
+      "mean_franq": 0.6801940617051004,
+      "sentences": 6
+    },
+    {
+      "pubid": "18269157",
+      "mean_franq": 0.5114337751952478,
+      "sentences": 6
+    },
+    {
+      "pubid": "25489696",
+      "mean_franq": 0.5195920213894489,
+      "sentences": 7
+    },
+    {
+      "pubid": "14599616",
+      "mean_franq": 0.515357089168024,
+      "sentences": 4
+    },
+    {
+      "pubid": "22537902",
+      "mean_franq": 0.42194995567660687,
+      "sentences": 12
+    },
+    {
+      "pubid": "19054501",
+      "mean_franq": 0.43080463611432596,
+      "sentences": 9
+    },
+    {
+      "pubid": "16432652",
+      "mean_franq": 0.6804942973088673,
+      "sentences": 3
+    },
+    {
+      "pubid": "19504993",
+      "mean_franq": 0.41598963997948285,
+      "sentences": 6
+    },
+    {
+      "pubid": "20571467",
+      "mean_franq": 0.42452139796706284,
+      "sentences": 6
+    },
+    {
+      "pubid": "24237112",
+      "mean_franq": 0.5163062551120204,
+      "sentences": 5
+    },
+    {
+      "pubid": "21402341",
+      "mean_franq": 0.5510683091500037,
+      "sentences": 9
+    },
+    {
+      "pubid": "20082356",
+      "mean_franq": 0.35973896726380183,
+      "sentences": 12
+    },
+    {
+      "pubid": "26606599",
+      "mean_franq": 0.39318677720491174,
+      "sentences": 12
+    },
+    {
+      "pubid": "11340218",
+      "mean_franq": 0.6422257958886987,
+      "sentences": 5
+    },
+    {
+      "pubid": "25481573",
+      "mean_franq": 0.40842320984635955,
+      "sentences": 3
+    },
+    {
+      "pubid": "25277731",
+      "mean_franq": 0.4140014974166541,
+      "sentences": 3
+    },
+    {
+      "pubid": "25475395",
+      "mean_franq": 0.5387002790752945,
+      "sentences": 4
+    },
+    {
+      "pubid": "23177368",
+      "mean_franq": 0.4278526361282754,
+      "sentences": 4
+    },
+    {
+      "pubid": "17179167",
+      "mean_franq": 0.35450766956382096,
+      "sentences": 18
+    },
+    {
+      "pubid": "14612308",
+      "mean_franq": 0.374075976615827,
+      "sentences": 7
+    },
+    {
+      "pubid": "27491658",
+      "mean_franq": 0.37604495740622845,
+      "sentences": 4
+    },
+    {
+      "pubid": "19822586",
+      "mean_franq": 0.4701585789088951,
+      "sentences": 3
+    },
+    {
+      "pubid": "27643961",
+      "mean_franq": 0.5882219404188146,
+      "sentences": 5
+    },
+    {
+      "pubid": "23539689",
+      "mean_franq": 0.4433023653678207,
+      "sentences": 3
+    },
+    {
+      "pubid": "22453060",
+      "mean_franq": 0.5138965367025616,
+      "sentences": 4
+    },
+    {
+      "pubid": "22227642",
+      "mean_franq": 0.5994409125011803,
+      "sentences": 3
+    },
+    {
+      "pubid": "12380309",
+      "mean_franq": 0.4138452787710295,
+      "sentences": 8
+    },
+    {
+      "pubid": "22186742",
+      "mean_franq": 0.43510404211730036,
+      "sentences": 5
+    },
+    {
+      "pubid": "22188074",
+      "mean_franq": 0.5645117099565169,
+      "sentences": 5
+    },
+    {
+      "pubid": "27989969",
+      "mean_franq": 0.5223395488067706,
+      "sentences": 8
+    },
+    {
+      "pubid": "18607272",
+      "mean_franq": 0.385719727221725,
+      "sentences": 8
+    },
+    {
+      "pubid": "18235194",
+      "mean_franq": 0.34821594439333636,
+      "sentences": 8
+    },
+    {
+      "pubid": "18049437",
+      "mean_franq": 0.5425138847664703,
+      "sentences": 2
+    },
+    {
+      "pubid": "15597845",
+      "mean_franq": 0.5732670162915233,
+      "sentences": 3
+    },
+    {
+      "pubid": "24996865",
+      "mean_franq": 0.5499234392149294,
+      "sentences": 3
+    },
+    {
+      "pubid": "23361217",
+      "mean_franq": 0.55929587480371,
+      "sentences": 3
+    },
+    {
+      "pubid": "17489316",
+      "mean_franq": 0.4030503517781489,
+      "sentences": 10
+    },
+    {
+      "pubid": "14518645",
+      "mean_franq": 0.368273056354282,
+      "sentences": 7
+    },
+    {
+      "pubid": "20337202",
+      "mean_franq": 0.3170702364070958,
+      "sentences": 4
+    },
+    {
+      "pubid": "26449554",
+      "mean_franq": 0.4151726496773604,
+      "sentences": 7
+    },
+    {
+      "pubid": "26215326",
+      "mean_franq": 0.5929482558821805,
+      "sentences": 4
+    },
+    {
+      "pubid": "29112560",
+      "mean_franq": 0.37125826832660414,
+      "sentences": 9
+    },
+    {
+      "pubid": "24315783",
+      "mean_franq": 0.5524593694025338,
+      "sentences": 3
+    },
+    {
+      "pubid": "9381529",
+      "mean_franq": 0.45042045917407975,
+      "sentences": 6
+    },
+    {
+      "pubid": "8985020",
+      "mean_franq": 0.42355441195014304,
+      "sentences": 6
+    },
+    {
+      "pubid": "26708803",
+      "mean_franq": 0.39040078099320635,
+      "sentences": 10
+    },
+    {
+      "pubid": "22427593",
+      "mean_franq": 0.7649878864909095,
+      "sentences": 6
+    },
+    {
+      "pubid": "11570976",
+      "mean_franq": 0.4443680673564933,
+      "sentences": 3
+    },
+    {
+      "pubid": "19757704",
+      "mean_franq": 0.5201999176299631,
+      "sentences": 4
+    },
+    {
+      "pubid": "27592038",
+      "mean_franq": 0.5193722537984444,
+      "sentences": 7
+    },
+    {
+      "pubid": "27044366",
+      "mean_franq": 0.41009731848317826,
+      "sentences": 9
+    },
+    {
+      "pubid": "9792366",
+      "mean_franq": 0.5053142198376961,
+      "sentences": 4
+    },
+    {
+      "pubid": "17562682",
+      "mean_franq": 0.409447272425727,
+      "sentences": 7
+    },
+    {
+      "pubid": "15800018",
+      "mean_franq": 0.6279856804454892,
+      "sentences": 5
+    },
+    {
+      "pubid": "14978612",
+      "mean_franq": 0.539049071164197,
+      "sentences": 4
+    },
+    {
+      "pubid": "18843057",
+      "mean_franq": 0.44996269333681893,
+      "sentences": 5
+    },
+    {
+      "pubid": "23076787",
+      "mean_franq": 0.3796929912830766,
+      "sentences": 4
+    },
+    {
+      "pubid": "9199905",
+      "mean_franq": 0.46518253269080645,
+      "sentences": 7
+    },
+    {
+      "pubid": "23999452",
+      "mean_franq": 0.5516089742834471,
+      "sentences": 4
+    },
+    {
+      "pubid": "22534881",
+      "mean_franq": 0.38485452884850896,
+      "sentences": 9
+    },
+    {
+      "pubid": "24785562",
+      "mean_franq": 0.4947947196109372,
+      "sentences": 8
+    },
+    {
+      "pubid": "22564465",
+      "mean_franq": 0.5235926116209569,
+      "sentences": 6
+    },
+    {
+      "pubid": "27456836",
+      "mean_franq": 0.5072022350683668,
+      "sentences": 13
+    },
+    {
+      "pubid": "27287237",
+      "mean_franq": 0.39061247526105314,
+      "sentences": 10
+    },
+    {
+      "pubid": "14697414",
+      "mean_franq": 0.45690098278772817,
+      "sentences": 4
+    },
+    {
+      "pubid": "26686513",
+      "mean_franq": 0.3597301897157037,
+      "sentences": 4
+    },
+    {
+      "pubid": "15530261",
+      "mean_franq": 0.3693475270772251,
+      "sentences": 7
+    },
+    {
+      "pubid": "24160268",
+      "mean_franq": 0.3775426396705503,
+      "sentences": 3
+    },
+    {
+      "pubid": "21823940",
+      "mean_franq": 0.7378772997202809,
+      "sentences": 4
+    },
+    {
+      "pubid": "27217036",
+      "mean_franq": 0.42637885768550293,
+      "sentences": 3
+    },
+    {
+      "pubid": "18565233",
+      "mean_franq": 0.6797338691943172,
+      "sentences": 6
+    },
+    {
+      "pubid": "19694846",
+      "mean_franq": 0.43259771979521244,
+      "sentences": 9
+    },
+    {
+      "pubid": "27184293",
+      "mean_franq": 0.5376825128972579,
+      "sentences": 13
+    },
+    {
+      "pubid": "19459018",
+      "mean_franq": 0.6088932688367859,
+      "sentences": 5
+    },
+    {
+      "pubid": "22042121",
+      "mean_franq": 0.4270298913520692,
+      "sentences": 9
+    },
+    {
+      "pubid": "16100194",
+      "mean_franq": 0.5203068100124101,
+      "sentences": 3
+    },
+    {
+      "pubid": "25480629",
+      "mean_franq": 0.478896484228448,
+      "sentences": 13
+    },
+    {
+      "pubid": "17453263",
+      "mean_franq": 0.41136340499384366,
+      "sentences": 6
+    },
+    {
+      "pubid": "18322741",
+      "mean_franq": 0.48196209891560043,
+      "sentences": 8
+    },
+    {
+      "pubid": "19106867",
+      "mean_franq": 0.32060767239642335,
+      "sentences": 12
+    },
+    {
+      "pubid": "25691513",
+      "mean_franq": 0.35322132943525997,
+      "sentences": 4
+    },
+    {
+      "pubid": "11035130",
+      "mean_franq": 0.4085769155778359,
+      "sentences": 7
+    },
+    {
+      "pubid": "19409117",
+      "mean_franq": 0.42581299549616763,
+      "sentences": 8
+    },
+    {
+      "pubid": "21900017",
+      "mean_franq": 0.5848856656481863,
+      "sentences": 3
+    },
+    {
+      "pubid": "16968876",
+      "mean_franq": 0.6568993518955076,
+      "sentences": 3
+    },
+    {
+      "pubid": "18540901",
+      "mean_franq": 0.6185663901263427,
+      "sentences": 4
+    },
+    {
+      "pubid": "27448572",
+      "mean_franq": 0.5387384420795154,
+      "sentences": 7
+    },
+    {
+      "pubid": "17621202",
+      "mean_franq": 0.5122231504648582,
+      "sentences": 5
+    },
+    {
+      "pubid": "25987398",
+      "mean_franq": 0.4375537960634297,
+      "sentences": 7
+    },
+    {
+      "pubid": "16816043",
+      "mean_franq": 0.3375251513055667,
+      "sentences": 10
+    },
+    {
+      "pubid": "12920330",
+      "mean_franq": 0.44319203731068935,
+      "sentences": 5
+    },
+    {
+      "pubid": "23497210",
+      "mean_franq": 0.3348584994024198,
+      "sentences": 6
+    },
+    {
+      "pubid": "21952349",
+      "mean_franq": 0.5288420675147334,
+      "sentences": 4
+    },
+    {
+      "pubid": "21712147",
+      "mean_franq": 0.5285954395061423,
+      "sentences": 3
+    },
+    {
+      "pubid": "25311479",
+      "mean_franq": 0.6307049833654006,
+      "sentences": 4
+    },
+    {
+      "pubid": "20602784",
+      "mean_franq": 0.5470213592818425,
+      "sentences": 6
+    },
+    {
+      "pubid": "12836106",
+      "mean_franq": 0.4333784585061024,
+      "sentences": 6
+    },
+    {
+      "pubid": "25588461",
+      "mean_franq": 0.44898964815456743,
+      "sentences": 5
+    },
+    {
+      "pubid": "19299238",
+      "mean_franq": 0.4055040023634711,
+      "sentences": 7
+    },
+    {
+      "pubid": "22706226",
+      "mean_franq": 0.5794181500778582,
+      "sentences": 3
+    },
+    {
+      "pubid": "12913878",
+      "mean_franq": 0.40505259160599066,
+      "sentences": 8
+    },
+    {
+      "pubid": "16769333",
+      "mean_franq": 0.4133143263487103,
+      "sentences": 7
+    },
+    {
+      "pubid": "22497340",
+      "mean_franq": 0.4009757579216386,
+      "sentences": 6
+    },
+    {
+      "pubid": "10223070",
+      "mean_franq": 0.40517793212172454,
+      "sentences": 10
+    },
+    {
+      "pubid": "8566975",
+      "mean_franq": 0.48520038220263495,
+      "sentences": 4
+    },
+    {
+      "pubid": "25186850",
+      "mean_franq": 0.37557693773545087,
+      "sentences": 9
+    },
+    {
+      "pubid": "9427037",
+      "mean_franq": 0.5687413781542061,
+      "sentences": 4
+    },
+    {
+      "pubid": "28359277",
+      "mean_franq": 0.45566658432480106,
+      "sentences": 3
+    },
+    {
+      "pubid": "11411430",
+      "mean_franq": 0.473555646581314,
+      "sentences": 7
+    },
+    {
+      "pubid": "16956164",
+      "mean_franq": 0.4938611769604017,
+      "sentences": 4
+    },
+    {
+      "pubid": "15687156",
+      "mean_franq": 0.5494444704181365,
+      "sentences": 5
+    },
+    {
+      "pubid": "28127977",
+      "mean_franq": 0.5480055690605339,
+      "sentences": 4
+    },
+    {
+      "pubid": "16809243",
+      "mean_franq": 0.664579508180545,
+      "sentences": 3
+    },
+    {
+      "pubid": "17276182",
+      "mean_franq": 0.3822158678939815,
+      "sentences": 13
+    },
+    {
+      "pubid": "21123461",
+      "mean_franq": 0.4053527691691026,
+      "sentences": 6
+    },
+    {
+      "pubid": "22428608",
+      "mean_franq": 0.7713009455581253,
+      "sentences": 6
+    },
+    {
+      "pubid": "27858166",
+      "mean_franq": 0.47402299882353005,
+      "sentences": 9
+    },
+    {
+      "pubid": "23791827",
+      "mean_franq": 0.4250740356970166,
+      "sentences": 10
+    },
+    {
+      "pubid": "18243752",
+      "mean_franq": 0.3707827870635847,
+      "sentences": 7
+    },
+    {
+      "pubid": "17279467",
+      "mean_franq": 0.3829525386425499,
+      "sentences": 6
+    },
+    {
+      "pubid": "22758782",
+      "mean_franq": 0.5820907985116892,
+      "sentences": 9
+    },
+    {
+      "pubid": "15223725",
+      "mean_franq": 0.45665302294576116,
+      "sentences": 4
+    },
+    {
+      "pubid": "19482903",
+      "mean_franq": 0.5371889038698234,
+      "sentences": 4
+    },
+    {
+      "pubid": "25752912",
+      "mean_franq": 0.5163525580862259,
+      "sentences": 6
+    },
+    {
+      "pubid": "21946341",
+      "mean_franq": 0.3870764139230393,
+      "sentences": 6
+    },
+    {
+      "pubid": "16428354",
+      "mean_franq": 0.44304947129250366,
+      "sentences": 10
+    },
+    {
+      "pubid": "19302863",
+      "mean_franq": 0.33272679691407286,
+      "sentences": 9
+    },
+    {
+      "pubid": "24245816",
+      "mean_franq": 0.5586547783049618,
+      "sentences": 5
+    },
+    {
+      "pubid": "24666444",
+      "mean_franq": 0.44945461333564984,
+      "sentences": 8
+    },
+    {
+      "pubid": "19913785",
+      "mean_franq": 0.44101155434317857,
+      "sentences": 8
+    },
+    {
+      "pubid": "1571683",
+      "mean_franq": 0.4552006808754727,
+      "sentences": 6
+    },
+    {
+      "pubid": "15631914",
+      "mean_franq": 0.3670386298349296,
+      "sentences": 9
+    },
+    {
+      "pubid": "11970923",
+      "mean_franq": 0.34542256374793034,
+      "sentences": 8
+    },
+    {
+      "pubid": "20121683",
+      "mean_franq": 0.567992721140097,
+      "sentences": 4
+    },
+    {
+      "pubid": "27281318",
+      "mean_franq": 0.6279017258840933,
+      "sentences": 3
+    },
+    {
+      "pubid": "12846929",
+      "mean_franq": 0.3825563350319042,
+      "sentences": 10
+    },
+    {
+      "pubid": "26505821",
+      "mean_franq": 0.549514224685222,
+      "sentences": 4
+    },
+    {
+      "pubid": "25156467",
+      "mean_franq": 0.5331556955804355,
+      "sentences": 3
+    },
+    {
+      "pubid": "22023714",
+      "mean_franq": 0.3949624731601672,
+      "sentences": 5
+    },
+    {
+      "pubid": "16046584",
+      "mean_franq": 0.4168310105550562,
+      "sentences": 7
+    },
+    {
+      "pubid": "16155169",
+      "mean_franq": 0.5343456478471502,
+      "sentences": 10
+    },
+    {
+      "pubid": "19398929",
+      "mean_franq": 0.4205338362863181,
+      "sentences": 8
+    },
+    {
+      "pubid": "28143468",
+      "mean_franq": 0.3158497415842332,
+      "sentences": 7
+    },
+    {
+      "pubid": "9483814",
+      "mean_franq": 0.4272594999038786,
+      "sentences": 17
+    },
+    {
+      "pubid": "22720085",
+      "mean_franq": 0.5061785689961116,
+      "sentences": 5
+    },
+    {
+      "pubid": "24748473",
+      "mean_franq": 0.32223437657655823,
+      "sentences": 9
+    },
+    {
+      "pubid": "15588538",
+      "mean_franq": 0.30446049993920504,
+      "sentences": 6
+    },
+    {
+      "pubid": "22211919",
+      "mean_franq": 0.506409172203899,
+      "sentences": 4
+    },
+    {
+      "pubid": "24433626",
+      "mean_franq": 0.5434147827843222,
+      "sentences": 6
+    },
+    {
+      "pubid": "9542484",
+      "mean_franq": 0.3944546347155223,
+      "sentences": 8
+    },
+    {
+      "pubid": "17008699",
+      "mean_franq": 0.30826384099256693,
+      "sentences": 8
+    },
+    {
+      "pubid": "23228527",
+      "mean_franq": 0.473995687612458,
+      "sentences": 3
+    },
+    {
+      "pubid": "15489384",
+      "mean_franq": 0.5204905852388059,
+      "sentences": 9
+    },
+    {
+      "pubid": "17444776",
+      "mean_franq": 0.46777141998520316,
+      "sentences": 8
+    },
+    {
+      "pubid": "8422202",
+      "mean_franq": 0.6119988898394843,
+      "sentences": 3
+    },
+    {
+      "pubid": "23794696",
+      "mean_franq": 0.6234605036069543,
+      "sentences": 4
+    },
+    {
+      "pubid": "20549895",
+      "mean_franq": 0.2972549166135853,
+      "sentences": 15
+    },
+    {
+      "pubid": "18714572",
+      "mean_franq": 0.4121736249602973,
+      "sentences": 11
+    },
+    {
+      "pubid": "2224269",
+      "mean_franq": 0.36849039961734437,
+      "sentences": 10
+    },
+    {
+      "pubid": "8910148",
+      "mean_franq": 0.41054265256732164,
+      "sentences": 6
+    },
+    {
+      "pubid": "23899611",
+      "mean_franq": 0.4795932333960965,
+      "sentences": 17
+    },
+    {
+      "pubid": "10548670",
+      "mean_franq": 0.6086202714775917,
+      "sentences": 4
+    },
+    {
+      "pubid": "26907557",
+      "mean_franq": 0.3312282184372198,
+      "sentences": 10
+    },
+    {
+      "pubid": "20871246",
+      "mean_franq": 0.4206067621521523,
+      "sentences": 10
+    },
+    {
+      "pubid": "22876568",
+      "mean_franq": 0.4238139956960685,
+      "sentences": 8
+    },
+    {
+      "pubid": "15280782",
+      "mean_franq": 0.4249031955426852,
+      "sentences": 6
+    },
+    {
+      "pubid": "17502203",
+      "mean_franq": 0.366790316271636,
+      "sentences": 14
+    },
+    {
+      "pubid": "26370095",
+      "mean_franq": 0.5239938878199225,
+      "sentences": 7
+    },
+    {
+      "pubid": "10354335",
+      "mean_franq": 0.5974403837658181,
+      "sentences": 6
+    },
+    {
+      "pubid": "26452334",
+      "mean_franq": 0.5039461673941659,
+      "sentences": 7
+    },
+    {
+      "pubid": "15065192",
+      "mean_franq": 0.6324477282708798,
+      "sentences": 4
+    },
+    {
+      "pubid": "25488308",
+      "mean_franq": 0.42207101610812353,
+      "sentences": 6
+    },
+    {
+      "pubid": "22449464",
+      "mean_franq": 0.4549368296282221,
+      "sentences": 3
+    },
+    {
+      "pubid": "26222664",
+      "mean_franq": 0.4166909130693345,
+      "sentences": 8
+    },
+    {
+      "pubid": "22617083",
+      "mean_franq": 0.4660963943646973,
+      "sentences": 4
+    },
+    {
+      "pubid": "9767546",
+      "mean_franq": 0.6123270767609377,
+      "sentences": 3
+    },
+    {
+      "pubid": "21214884",
+      "mean_franq": 0.6829179767554919,
+      "sentences": 3
+    },
+    {
+      "pubid": "23321509",
+      "mean_franq": 0.30319290736410603,
+      "sentences": 20
+    },
+    {
+      "pubid": "16827975",
+      "mean_franq": 0.3449382017701582,
+      "sentences": 10
+    },
+    {
+      "pubid": "18179827",
+      "mean_franq": 0.4713727246202616,
+      "sentences": 13
+    },
+    {
+      "pubid": "14872327",
+      "mean_franq": 0.4050690144988433,
+      "sentences": 10
+    },
+    {
+      "pubid": "24809662",
+      "mean_franq": 0.6474253028521522,
+      "sentences": 4
+    },
+    {
+      "pubid": "26485091",
+      "mean_franq": 0.42906248515810286,
+      "sentences": 6
+    },
+    {
+      "pubid": "12805495",
+      "mean_franq": 0.6025272945364774,
+      "sentences": 7
+    },
+    {
+      "pubid": "19925761",
+      "mean_franq": 0.38721101440680533,
+      "sentences": 11
+    },
+    {
+      "pubid": "11458136",
+      "mean_franq": 0.3939667290826759,
+      "sentences": 7
+    },
+    {
+      "pubid": "20382292",
+      "mean_franq": 0.4621907395603216,
+      "sentences": 9
+    },
+    {
+      "pubid": "22236315",
+      "mean_franq": 0.5563862756326051,
+      "sentences": 6
+    },
+    {
+      "pubid": "17051586",
+      "mean_franq": 0.6322915755493143,
+      "sentences": 6
+    },
+    {
+      "pubid": "25007420",
+      "mean_franq": 0.6506439417422103,
+      "sentences": 6
+    },
+    {
+      "pubid": "26556589",
+      "mean_franq": 0.6567188693698836,
+      "sentences": 4
+    },
+    {
+      "pubid": "12612531",
+      "mean_franq": 0.33057926348379263,
+      "sentences": 13
+    },
+    {
+      "pubid": "26194560",
+      "mean_franq": 0.7164542398726553,
+      "sentences": 5
+    },
+    {
+      "pubid": "11079675",
+      "mean_franq": 0.36745936889700653,
+      "sentences": 11
+    },
+    {
+      "pubid": "21459725",
+      "mean_franq": 0.5623732077051109,
+      "sentences": 6
+    },
+    {
+      "pubid": "21172844",
+      "mean_franq": 0.48480876373262854,
+      "sentences": 4
+    },
+    {
+      "pubid": "24946973",
+      "mean_franq": 0.6025988942281068,
+      "sentences": 4
+    },
+    {
+      "pubid": "17335331",
+      "mean_franq": 0.603655107515501,
+      "sentences": 4
+    },
+    {
+      "pubid": "27581329",
+      "mean_franq": 0.40507448036485005,
+      "sentences": 4
+    },
+    {
+      "pubid": "11867487",
+      "mean_franq": 0.41180905958035957,
+      "sentences": 3
+    },
+    {
+      "pubid": "12765819",
+      "mean_franq": 0.4724991863271109,
+      "sentences": 6
+    },
+    {
+      "pubid": "24507422",
+      "mean_franq": 0.5684589452594979,
+      "sentences": 4
+    },
+    {
+      "pubid": "9854965",
+      "mean_franq": 0.3418034936827626,
+      "sentences": 4
+    },
+    {
+      "pubid": "21756515",
+      "mean_franq": 0.3176425077874314,
+      "sentences": 4
+    },
+    {
+      "pubid": "19131405",
+      "mean_franq": 0.6925866963561641,
+      "sentences": 5
+    },
+    {
+      "pubid": "18568290",
+      "mean_franq": 0.6149314962720543,
+      "sentences": 4
+    },
+    {
+      "pubid": "18667100",
+      "mean_franq": 0.47071059283603506,
+      "sentences": 10
+    },
+    {
+      "pubid": "9191526",
+      "mean_franq": 0.3975438829577159,
+      "sentences": 5
+    },
+    {
+      "pubid": "10605400",
+      "mean_franq": 0.3099991161467067,
+      "sentences": 10
+    },
+    {
+      "pubid": "17601244",
+      "mean_franq": 0.48619076957809604,
+      "sentences": 6
+    },
+    {
+      "pubid": "20608141",
+      "mean_franq": 0.4030667690392816,
+      "sentences": 8
+    },
+    {
+      "pubid": "25986020",
+      "mean_franq": 0.49648185181634313,
+      "sentences": 3
+    },
+    {
+      "pubid": "15670262",
+      "mean_franq": 0.41390355684629,
+      "sentences": 10
+    },
+    {
+      "pubid": "22900881",
+      "mean_franq": 0.34313044234859486,
+      "sentences": 10
+    },
+    {
+      "pubid": "11413427",
+      "mean_franq": 0.4099831801754178,
+      "sentences": 8
+    },
+    {
+      "pubid": "9602458",
+      "mean_franq": 0.5245724478126693,
+      "sentences": 2
+    },
+    {
+      "pubid": "24434052",
+      "mean_franq": 0.3820138615526153,
+      "sentences": 7
+    },
+    {
+      "pubid": "17598882",
+      "mean_franq": 0.4768088328161067,
+      "sentences": 3
+    },
+    {
+      "pubid": "21190419",
+      "mean_franq": 0.46585308989102736,
+      "sentences": 4
+    },
+    {
+      "pubid": "16403186",
+      "mean_franq": 0.6848012079283682,
+      "sentences": 4
+    },
+    {
+      "pubid": "11888773",
+      "mean_franq": 0.40412518476317705,
+      "sentences": 4
+    },
+    {
+      "pubid": "25940336",
+      "mean_franq": 0.5535998417525704,
+      "sentences": 5
+    },
+    {
+      "pubid": "24014276",
+      "mean_franq": 0.42147159691763786,
+      "sentences": 4
+    },
+    {
+      "pubid": "18359123",
+      "mean_franq": 0.3372673570302662,
+      "sentences": 9
+    },
+    {
+      "pubid": "26113007",
+      "mean_franq": 0.4118178871278825,
+      "sentences": 8
+    },
+    {
+      "pubid": "11838307",
+      "mean_franq": 0.5421408095611534,
+      "sentences": 3
+    },
+    {
+      "pubid": "18222909",
+      "mean_franq": 0.5596339946262451,
+      "sentences": 4
+    },
+    {
+      "pubid": "24747511",
+      "mean_franq": 0.3860065288299365,
+      "sentences": 7
+    },
+    {
+      "pubid": "12407608",
+      "mean_franq": 0.5735707851963042,
+      "sentences": 3
+    },
+    {
+      "pubid": "19836806",
+      "mean_franq": 0.35972085523259584,
+      "sentences": 12
+    },
+    {
+      "pubid": "17076091",
+      "mean_franq": 0.4643684487430289,
+      "sentences": 4
+    },
+    {
+      "pubid": "21801416",
+      "mean_franq": 0.6186376135003447,
+      "sentences": 4
+    },
+    {
+      "pubid": "25819796",
+      "mean_franq": 0.6572135047702433,
+      "sentences": 6
+    },
+    {
+      "pubid": "18496363",
+      "mean_franq": 0.3609193324435752,
+      "sentences": 10
+    },
+    {
+      "pubid": "14551704",
+      "mean_franq": 0.4366411542815861,
+      "sentences": 4
+    },
+    {
+      "pubid": "23234860",
+      "mean_franq": 0.3681559748867611,
+      "sentences": 4
+    },
+    {
+      "pubid": "22532370",
+      "mean_franq": 0.4895376053163569,
+      "sentences": 5
+    },
+    {
+      "pubid": "22656647",
+      "mean_franq": 0.33005424595274735,
+      "sentences": 9
+    },
+    {
+      "pubid": "22683044",
+      "mean_franq": 0.43741613875293855,
+      "sentences": 4
+    },
+    {
+      "pubid": "11566686",
+      "mean_franq": 0.6316538492837117,
+      "sentences": 3
+    },
+    {
+      "pubid": "15502995",
+      "mean_franq": 0.4794700581429624,
+      "sentences": 4
+    },
+    {
+      "pubid": "24019262",
+      "mean_franq": 0.42706945507520844,
+      "sentences": 5
+    },
+    {
+      "pubid": "22867778",
+      "mean_franq": 0.5274848547719196,
+      "sentences": 4
+    },
+    {
+      "pubid": "23348330",
+      "mean_franq": 0.3709979159009314,
+      "sentences": 4
+    },
+    {
+      "pubid": "21658267",
+      "mean_franq": 0.47670557769249733,
+      "sentences": 7
+    },
+    {
+      "pubid": "28177278",
+      "mean_franq": 0.4739393832699856,
+      "sentences": 3
+    },
+    {
+      "pubid": "18403944",
+      "mean_franq": 0.552768803768383,
+      "sentences": 7
+    },
+    {
+      "pubid": "20363841",
+      "mean_franq": 0.5262896890529678,
+      "sentences": 4
+    },
+    {
+      "pubid": "19664156",
+      "mean_franq": 0.5591737125309573,
+      "sentences": 4
+    },
+    {
+      "pubid": "23356465",
+      "mean_franq": 0.3583908424852679,
+      "sentences": 9
+    },
+    {
+      "pubid": "22972546",
+      "mean_franq": 0.5922870801584822,
+      "sentences": 4
+    },
+    {
+      "pubid": "21850494",
+      "mean_franq": 0.47928500183319056,
+      "sentences": 5
+    },
+    {
+      "pubid": "26778755",
+      "mean_franq": 0.42816494233800656,
+      "sentences": 18
+    },
+    {
+      "pubid": "20187289",
+      "mean_franq": 0.35869940183611176,
+      "sentences": 6
+    },
+    {
+      "pubid": "27615402",
+      "mean_franq": 0.6732977624918725,
+      "sentences": 7
+    },
+    {
+      "pubid": "20297950",
+      "mean_franq": 0.3693822040093714,
+      "sentences": 10
+    },
+    {
+      "pubid": "23735520",
+      "mean_franq": 0.39745330795979655,
+      "sentences": 14
+    },
+    {
+      "pubid": "10759659",
+      "mean_franq": 0.3017688173837932,
+      "sentences": 11
+    },
+    {
+      "pubid": "25592625",
+      "mean_franq": 0.4463541998101517,
+      "sentences": 17
+    },
+    {
+      "pubid": "12595848",
+      "mean_franq": 0.5972287607825028,
+      "sentences": 6
+    },
+    {
+      "pubid": "20064872",
+      "mean_franq": 0.5136360706374715,
+      "sentences": 3
+    },
+    {
+      "pubid": "23588461",
+      "mean_franq": 0.44494146112492167,
+      "sentences": 8
+    },
+    {
+      "pubid": "18019905",
+      "mean_franq": 0.47162639207844825,
+      "sentences": 4
+    },
+    {
+      "pubid": "25859857",
+      "mean_franq": 0.5765760162703466,
+      "sentences": 4
+    },
+    {
+      "pubid": "26418796",
+      "mean_franq": 0.3320171985724618,
+      "sentences": 6
+    },
+    {
+      "pubid": "22825590",
+      "mean_franq": 0.5151497974045244,
+      "sentences": 5
+    },
+    {
+      "pubid": "18832500",
+      "mean_franq": 0.3665052363499419,
+      "sentences": 10
+    },
+    {
+      "pubid": "18955431",
+      "mean_franq": 0.4262867760578682,
+      "sentences": 3
+    },
+    {
+      "pubid": "9550200",
+      "mean_franq": 0.5588091638176741,
+      "sentences": 3
+    },
+    {
+      "pubid": "10135926",
+      "mean_franq": 0.621082041121235,
+      "sentences": 5
+    },
+    {
+      "pubid": "11296674",
+      "mean_franq": 0.4175374161689419,
+      "sentences": 2
+    },
+    {
+      "pubid": "24139705",
+      "mean_franq": 0.3770234912587611,
+      "sentences": 9
+    },
+    {
+      "pubid": "16253970",
+      "mean_franq": 0.6188628749994598,
+      "sentences": 4
+    },
+    {
+      "pubid": "14745753",
+      "mean_franq": 0.4723636235236669,
+      "sentences": 7
+    },
+    {
+      "pubid": "27078715",
+      "mean_franq": 0.4460891550719125,
+      "sentences": 8
+    },
+    {
+      "pubid": "15939071",
+      "mean_franq": 0.4998983769007035,
+      "sentences": 6
+    },
+    {
+      "pubid": "11926574",
+      "mean_franq": 0.5777192478968057,
+      "sentences": 5
+    },
+    {
+      "pubid": "18594195",
+      "mean_franq": 0.4035256286146101,
+      "sentences": 9
+    },
+    {
+      "pubid": "25614468",
+      "mean_franq": 0.5948914102611914,
+      "sentences": 4
+    },
+    {
+      "pubid": "19653482",
+      "mean_franq": 0.46628706013167487,
+      "sentences": 4
+    },
+    {
+      "pubid": "11380492",
+      "mean_franq": 0.398510739234237,
+      "sentences": 12
+    },
+    {
+      "pubid": "16296668",
+      "mean_franq": 0.4201157639867606,
+      "sentences": 4
+    },
+    {
+      "pubid": "19520213",
+      "mean_franq": 0.34695394898453774,
+      "sentences": 9
+    },
+    {
+      "pubid": "14992556",
+      "mean_franq": 0.4230486703221018,
+      "sentences": 7
+    },
+    {
+      "pubid": "19931500",
+      "mean_franq": 0.5429701236098043,
+      "sentences": 7
+    },
+    {
+      "pubid": "18378554",
+      "mean_franq": 0.4747962824849764,
+      "sentences": 4
+    },
+    {
+      "pubid": "17306983",
+      "mean_franq": 0.42616190625087413,
+      "sentences": 9
+    },
+    {
+      "pubid": "26879871",
+      "mean_franq": 0.30330009571210953,
+      "sentences": 8
+    },
+    {
+      "pubid": "24336869",
+      "mean_franq": 0.45231959922994047,
+      "sentences": 6
+    },
+    {
+      "pubid": "16962519",
+      "mean_franq": 0.7079559312627509,
+      "sentences": 4
+    },
+    {
+      "pubid": "17704864",
+      "mean_franq": 0.43811595738434317,
+      "sentences": 6
+    },
+    {
+      "pubid": "18307476",
+      "mean_franq": 0.5808744562727626,
+      "sentences": 5
+    },
+    {
+      "pubid": "15151701",
+      "mean_franq": 0.4810237361611796,
+      "sentences": 4
+    },
+    {
+      "pubid": "26399179",
+      "mean_franq": 0.5215927491346584,
+      "sentences": 4
+    },
+    {
+      "pubid": "21889895",
+      "mean_franq": 0.38411239695770005,
+      "sentences": 9
+    },
+    {
+      "pubid": "21569408",
+      "mean_franq": 0.608725144657886,
+      "sentences": 3
+    },
+    {
+      "pubid": "23025584",
+      "mean_franq": 0.5327515014597964,
+      "sentences": 4
+    },
+    {
+      "pubid": "23587089",
+      "mean_franq": 0.3805763086443054,
+      "sentences": 7
+    },
+    {
+      "pubid": "15539888",
+      "mean_franq": 0.41658481769779987,
+      "sentences": 4
+    },
+    {
+      "pubid": "23096188",
+      "mean_franq": 0.5923518831941518,
+      "sentences": 3
+    },
+    {
+      "pubid": "21881325",
+      "mean_franq": 0.46662820217199596,
+      "sentences": 10
+    },
+    {
+      "pubid": "19542542",
+      "mean_franq": 0.3688433955857603,
+      "sentences": 10
+    },
+    {
+      "pubid": "16872243",
+      "mean_franq": 0.41453816216671086,
+      "sentences": 8
+    },
+    {
+      "pubid": "15141797",
+      "mean_franq": 0.4186451399144062,
+      "sentences": 9
+    },
+    {
+      "pubid": "25394614",
+      "mean_franq": 0.4864642432798915,
+      "sentences": 7
+    },
+    {
+      "pubid": "10381996",
+      "mean_franq": 0.6308173048107809,
+      "sentences": 4
+    },
+    {
+      "pubid": "26134053",
+      "mean_franq": 0.4388810753635505,
+      "sentences": 16
+    },
+    {
+      "pubid": "25274085",
+      "mean_franq": 0.5178136108004286,
+      "sentences": 5
+    },
+    {
+      "pubid": "12098035",
+      "mean_franq": 0.3244619551668051,
+      "sentences": 6
+    },
+    {
+      "pubid": "12963175",
+      "mean_franq": 0.5846435783506331,
+      "sentences": 3
+    },
+    {
+      "pubid": "21865668",
+      "mean_franq": 0.4701004347121538,
+      "sentences": 5
+    },
+    {
+      "pubid": "16510651",
+      "mean_franq": 0.3729301437872591,
+      "sentences": 10
+    },
+    {
+      "pubid": "24901580",
+      "mean_franq": 0.6887812784230047,
+      "sentences": 3
+    },
+    {
+      "pubid": "19468282",
+      "mean_franq": 0.5134923859315565,
+      "sentences": 4
+    },
+    {
+      "pubid": "21481154",
+      "mean_franq": 0.4305345388395711,
+      "sentences": 11
+    },
+    {
+      "pubid": "21398266",
+      "mean_franq": 0.4563848633781656,
+      "sentences": 3
+    },
+    {
+      "pubid": "25371231",
+      "mean_franq": 0.4590514105657494,
+      "sentences": 5
+    },
+    {
+      "pubid": "23252468",
+      "mean_franq": 0.5592246231085447,
+      "sentences": 5
+    },
+    {
+      "pubid": "22440363",
+      "mean_franq": 0.41983068715768973,
+      "sentences": 14
+    },
+    {
+      "pubid": "12068831",
+      "mean_franq": 0.5329627472632441,
+      "sentences": 3
+    },
+    {
+      "pubid": "20530150",
+      "mean_franq": 0.5792212293509987,
+      "sentences": 4
+    },
+    {
+      "pubid": "21618245",
+      "mean_franq": 0.41709616994055543,
+      "sentences": 13
+    },
+    {
+      "pubid": "26085176",
+      "mean_franq": 0.49247324074403126,
+      "sentences": 12
+    },
+    {
+      "pubid": "18158048",
+      "mean_franq": 0.38100469160898986,
+      "sentences": 8
+    },
+    {
+      "pubid": "21256734",
+      "mean_franq": 0.4569720643654143,
+      "sentences": 6
+    },
+    {
+      "pubid": "28027677",
+      "mean_franq": 0.5621985614783777,
+      "sentences": 5
+    },
+    {
+      "pubid": "17595200",
+      "mean_franq": 0.5053752275583618,
+      "sentences": 3
+    },
+    {
+      "pubid": "26548832",
+      "mean_franq": 0.43090988074526076,
+      "sentences": 10
+    },
+    {
+      "pubid": "15879722",
+      "mean_franq": 0.47017296679526055,
+      "sentences": 10
+    },
+    {
+      "pubid": "27554179",
+      "mean_franq": 0.6178360012121461,
+      "sentences": 5
+    },
+    {
+      "pubid": "15381614",
+      "mean_franq": 0.4397147607195917,
+      "sentences": 8
+    },
+    {
+      "pubid": "22012962",
+      "mean_franq": 0.5094886663737179,
+      "sentences": 8
+    },
+    {
+      "pubid": "18948835",
+      "mean_franq": 0.603152158654187,
+      "sentences": 5
+    },
+    {
+      "pubid": "18435678",
+      "mean_franq": 0.3555222508642939,
+      "sentences": 10
+    },
+    {
+      "pubid": "19268855",
+      "mean_franq": 0.43457813734823725,
+      "sentences": 4
+    },
+    {
+      "pubid": "12238307",
+      "mean_franq": 0.703761678756467,
+      "sentences": 7
+    },
+    {
+      "pubid": "20684175",
+      "mean_franq": 0.43856118201339017,
+      "sentences": 11
+    },
+    {
+      "pubid": "27216167",
+      "mean_franq": 0.6580991703020017,
+      "sentences": 5
+    },
+    {
+      "pubid": "19852337",
+      "mean_franq": 0.43380513924128,
+      "sentences": 10
+    },
+    {
+      "pubid": "22680064",
+      "mean_franq": 0.4609540599175824,
+      "sentences": 5
+    },
+    {
+      "pubid": "25417760",
+      "mean_franq": 0.387004667351648,
+      "sentences": 14
+    },
+    {
+      "pubid": "22365295",
+      "mean_franq": 0.42070762093794456,
+      "sentences": 9
+    },
+    {
+      "pubid": "15125825",
+      "mean_franq": 0.4216174605294308,
+      "sentences": 11
+    },
+    {
+      "pubid": "24652474",
+      "mean_franq": 0.3547635520814129,
+      "sentences": 14
+    },
+    {
+      "pubid": "24947183",
+      "mean_franq": 0.41081438136834014,
+      "sentences": 5
+    },
+    {
+      "pubid": "25779009",
+      "mean_franq": 0.567447359308586,
+      "sentences": 4
+    },
+    {
+      "pubid": "17105833",
+      "mean_franq": 0.5878469755973309,
+      "sentences": 4
+    },
+    {
+      "pubid": "27338535",
+      "mean_franq": 0.4657585532459752,
+      "sentences": 4
+    },
+    {
+      "pubid": "27690714",
+      "mean_franq": 0.4256272895514432,
+      "sentences": 6
+    },
+    {
+      "pubid": "21346501",
+      "mean_franq": 0.5010934414012587,
+      "sentences": 6
+    },
+    {
+      "pubid": "24964725",
+      "mean_franq": 0.3395151474664674,
+      "sentences": 14
+    },
+    {
+      "pubid": "18708308",
+      "mean_franq": 0.3486321924575661,
+      "sentences": 6
+    },
+    {
+      "pubid": "11759976",
+      "mean_franq": 0.4127713659288318,
+      "sentences": 8
+    },
+    {
+      "pubid": "16319544",
+      "mean_franq": 0.5197563529671487,
+      "sentences": 5
+    },
+    {
+      "pubid": "20674150",
+      "mean_franq": 0.5351483420344355,
+      "sentences": 4
+    },
+    {
+      "pubid": "25336163",
+      "mean_franq": 0.42482970446274193,
+      "sentences": 11
+    },
+    {
+      "pubid": "25887165",
+      "mean_franq": 0.47061994565567694,
+      "sentences": 6
+    },
+    {
+      "pubid": "12947068",
+      "mean_franq": 0.32358266559584575,
+      "sentences": 10
+    },
+    {
+      "pubid": "16776337",
+      "mean_franq": 0.6455184394378409,
+      "sentences": 4
+    },
+    {
+      "pubid": "22668852",
+      "mean_franq": 0.5489518280988739,
+      "sentences": 4
+    },
+    {
+      "pubid": "25251991",
+      "mean_franq": 0.7055145547611955,
+      "sentences": 3
+    },
+    {
+      "pubid": "7497757",
+      "mean_franq": 0.3660263151863658,
+      "sentences": 18
+    },
+    {
+      "pubid": "8262881",
+      "mean_franq": 0.42264453231334753,
+      "sentences": 7
+    },
+    {
+      "pubid": "11943048",
+      "mean_franq": 0.546501306918361,
+      "sentences": 9
+    },
+    {
+      "pubid": "20306735",
+      "mean_franq": 0.5053518949218467,
+      "sentences": 5
+    },
+    {
+      "pubid": "23414523",
+      "mean_franq": 0.4139051590995332,
+      "sentences": 9
+    },
+    {
+      "pubid": "11882828",
+      "mean_franq": 0.6381257341111501,
+      "sentences": 4
+    },
+    {
+      "pubid": "24939676",
+      "mean_franq": 0.4144392475401871,
+      "sentences": 8
+    },
+    {
+      "pubid": "17076590",
+      "mean_franq": 0.3301915762737825,
+      "sentences": 6
+    },
+    {
+      "pubid": "21745056",
+      "mean_franq": 0.3823159407941502,
+      "sentences": 8
+    },
+    {
+      "pubid": "22979954",
+      "mean_franq": 0.5971774492397494,
+      "sentences": 4
+    },
+    {
+      "pubid": "22955530",
+      "mean_franq": 0.6243929658241656,
+      "sentences": 4
+    },
+    {
+      "pubid": "18507507",
+      "mean_franq": 0.5542922203871898,
+      "sentences": 4
+    },
+    {
+      "pubid": "17323047",
+      "mean_franq": 0.4497272471160623,
+      "sentences": 8
+    },
+    {
+      "pubid": "24851767",
+      "mean_franq": 0.44278041039200555,
+      "sentences": 7
+    },
+    {
+      "pubid": "12006913",
+      "mean_franq": 0.36017925521609434,
+      "sentences": 16
+    },
+    {
+      "pubid": "8245806",
+      "mean_franq": 0.6583335684592099,
+      "sentences": 9
+    },
+    {
+      "pubid": "17691856",
+      "mean_franq": 0.5016265745290687,
+      "sentences": 4
+    },
+    {
+      "pubid": "15222284",
+      "mean_franq": 0.6435038015488577,
+      "sentences": 4
+    },
+    {
+      "pubid": "25501465",
+      "mean_franq": 0.40296771785983604,
+      "sentences": 9
+    },
+    {
+      "pubid": "16414216",
+      "mean_franq": 0.4030683992319955,
+      "sentences": 9
+    },
+    {
+      "pubid": "19155657",
+      "mean_franq": 0.42670349517636197,
+      "sentences": 8
+    },
+    {
+      "pubid": "27050489",
+      "mean_franq": 0.39208975607763485,
+      "sentences": 11
+    },
+    {
+      "pubid": "24977765",
+      "mean_franq": 0.39302135519389836,
+      "sentences": 5
+    },
+    {
+      "pubid": "19130332",
+      "mean_franq": 0.4217586897227809,
+      "sentences": 6
+    },
+    {
+      "pubid": "23949294",
+      "mean_franq": 0.523843374893311,
+      "sentences": 5
+    },
+    {
+      "pubid": "18926458",
+      "mean_franq": 0.4655788932106033,
+      "sentences": 6
+    },
+    {
+      "pubid": "10749257",
+      "mean_franq": 0.5753531431150959,
+      "sentences": 3
+    },
+    {
+      "pubid": "17610439",
+      "mean_franq": 0.5332267234770487,
+      "sentences": 3
+    },
+    {
+      "pubid": "26859535",
+      "mean_franq": 0.4080314041406352,
+      "sentences": 4
+    },
+    {
+      "pubid": "25446909",
+      "mean_franq": 0.4767016436453871,
+      "sentences": 3
+    },
+    {
+      "pubid": "17220021",
+      "mean_franq": 0.34984041179031783,
+      "sentences": 6
+    },
+    {
+      "pubid": "10158597",
+      "mean_franq": 0.4248472483728669,
+      "sentences": 7
+    },
+    {
+      "pubid": "21198823",
+      "mean_franq": 0.5435803859624357,
+      "sentences": 4
+    },
+    {
+      "pubid": "17259061",
+      "mean_franq": 0.5253687254647389,
+      "sentences": 12
+    },
+    {
+      "pubid": "18375490",
+      "mean_franq": 0.5305748314227712,
+      "sentences": 3
+    },
+    {
+      "pubid": "24142776",
+      "mean_franq": 0.4167191536391704,
+      "sentences": 13
+    },
+    {
+      "pubid": "18388848",
+      "mean_franq": 0.33565426083280175,
+      "sentences": 9
+    },
+    {
+      "pubid": "22251324",
+      "mean_franq": 0.42580219799842167,
+      "sentences": 4
+    },
+    {
+      "pubid": "27896825",
+      "mean_franq": 0.6286182534945143,
+      "sentences": 5
+    },
+    {
+      "pubid": "22117569",
+      "mean_franq": 0.3878527306639845,
+      "sentences": 6
+    },
+    {
+      "pubid": "25787073",
+      "mean_franq": 0.4518222083759763,
+      "sentences": 5
+    },
+    {
+      "pubid": "14631523",
+      "mean_franq": 0.6144008912943767,
+      "sentences": 3
+    },
+    {
+      "pubid": "26717802",
+      "mean_franq": 0.3794147645546867,
+      "sentences": 8
+    },
+    {
+      "pubid": "23810330",
+      "mean_franq": 0.4027144687425405,
+      "sentences": 12
+    },
+    {
+      "pubid": "19027440",
+      "mean_franq": 0.3175200035348014,
+      "sentences": 10
+    },
+    {
+      "pubid": "24446763",
+      "mean_franq": 0.4088521669584893,
+      "sentences": 3
+    },
+    {
+      "pubid": "9444542",
+      "mean_franq": 0.4104616320424612,
+      "sentences": 5
+    },
+    {
+      "pubid": "23389866",
+      "mean_franq": 0.6259203334783171,
+      "sentences": 4
+    },
+    {
+      "pubid": "19142546",
+      "mean_franq": 0.51808305223863,
+      "sentences": 5
+    },
+    {
+      "pubid": "9107172",
+      "mean_franq": 0.5958735518712002,
+      "sentences": 6
+    },
+    {
+      "pubid": "9363244",
+      "mean_franq": 0.2930959630300815,
+      "sentences": 9
+    },
+    {
+      "pubid": "10411439",
+      "mean_franq": 0.3514140044310878,
+      "sentences": 8
+    },
+    {
+      "pubid": "21166749",
+      "mean_franq": 0.6152678614523881,
+      "sentences": 4
+    },
+    {
+      "pubid": "27818079",
+      "mean_franq": 0.44348880795635726,
+      "sentences": 6
+    },
+    {
+      "pubid": "25982163",
+      "mean_franq": 0.45035299325580436,
+      "sentences": 2
+    },
+    {
+      "pubid": "20353735",
+      "mean_franq": 0.4010809470992516,
+      "sentences": 12
+    },
+    {
+      "pubid": "24630333",
+      "mean_franq": 0.5143319528843239,
+      "sentences": 5
+    },
+    {
+      "pubid": "27096199",
+      "mean_franq": 0.461852843725634,
+      "sentences": 6
+    },
+    {
+      "pubid": "22519710",
+      "mean_franq": 0.6237753495491202,
+      "sentences": 3
+    },
+    {
+      "pubid": "12040336",
+      "mean_franq": 0.4819227662704593,
+      "sentences": 6
+    },
+    {
+      "pubid": "15918864",
+      "mean_franq": 0.49601929861766403,
+      "sentences": 5
+    },
+    {
+      "pubid": "23601294",
+      "mean_franq": 0.46808470539608726,
+      "sentences": 6
+    },
+    {
+      "pubid": "21361755",
+      "mean_franq": 0.49986178786498936,
+      "sentences": 9
+    },
+    {
+      "pubid": "9003088",
+      "mean_franq": 0.6339165639517752,
+      "sentences": 6
+    },
+    {
+      "pubid": "23337545",
+      "mean_franq": 0.3594389597185266,
+      "sentences": 3
+    },
+    {
+      "pubid": "10490564",
+      "mean_franq": 0.39839131803516614,
+      "sentences": 10
+    },
+    {
+      "pubid": "23375036",
+      "mean_franq": 0.4708254955000577,
+      "sentences": 3
+    },
+    {
+      "pubid": "11555508",
+      "mean_franq": 0.46283464924383455,
+      "sentences": 9
+    },
+    {
+      "pubid": "16778275",
+      "mean_franq": 0.44859173503244687,
+      "sentences": 4
+    },
+    {
+      "pubid": "27136599",
+      "mean_franq": 0.3794921929607339,
+      "sentences": 13
+    },
+    {
+      "pubid": "27050505",
+      "mean_franq": 0.6912159518427501,
+      "sentences": 5
+    },
+    {
+      "pubid": "18403945",
+      "mean_franq": 0.596940455822314,
+      "sentences": 4
+    },
+    {
+      "pubid": "11149643",
+      "mean_franq": 0.5679508795712193,
+      "sentences": 4
+    },
+    {
+      "pubid": "26200172",
+      "mean_franq": 0.45168976994251525,
+      "sentences": 5
+    },
+    {
+      "pubid": "18783922",
+      "mean_franq": 0.5439623407980592,
+      "sentences": 6
+    },
+    {
+      "pubid": "12684740",
+      "mean_franq": 0.377162820135308,
+      "sentences": 8
+    },
+    {
+      "pubid": "25155638",
+      "mean_franq": 0.4562865690826789,
+      "sentences": 7
+    },
+    {
+      "pubid": "26820719",
+      "mean_franq": 0.504121531668838,
+      "sentences": 5
+    },
+    {
+      "pubid": "21080127",
+      "mean_franq": 0.376104633925572,
+      "sentences": 10
+    },
+    {
+      "pubid": "18086459",
+      "mean_franq": 0.4163906172730305,
+      "sentences": 9
+    },
+    {
+      "pubid": "11978239",
+      "mean_franq": 0.42675064284886716,
+      "sentences": 7
+    },
+    {
+      "pubid": "10798511",
+      "mean_franq": 0.4204229296925282,
+      "sentences": 9
+    },
+    {
+      "pubid": "15477551",
+      "mean_franq": 0.40451814769860384,
+      "sentences": 8
+    },
+    {
+      "pubid": "19327500",
+      "mean_franq": 0.5193695278443552,
+      "sentences": 11
+    },
+    {
+      "pubid": "24614789",
+      "mean_franq": 0.4771879005275781,
+      "sentences": 6
+    },
+    {
+      "pubid": "23283159",
+      "mean_franq": 0.48631559656149187,
+      "sentences": 5
+    },
+    {
+      "pubid": "16465002",
+      "mean_franq": 0.4961564728082126,
+      "sentences": 5
+    },
+    {
+      "pubid": "24191126",
+      "mean_franq": 0.5336762598553161,
+      "sentences": 3
+    },
+    {
+      "pubid": "25218577",
+      "mean_franq": 0.6184662361930512,
+      "sentences": 4
+    },
+    {
+      "pubid": "20488985",
+      "mean_franq": 0.5902722695210076,
+      "sentences": 6
+    },
+    {
+      "pubid": "11567820",
+      "mean_franq": 0.5170834267108022,
+      "sentences": 4
+    },
+    {
+      "pubid": "19100463",
+      "mean_franq": 0.5729975874973586,
+      "sentences": 5
+    },
+    {
+      "pubid": "12769830",
+      "mean_franq": 0.6567566033624788,
+      "sentences": 5
+    },
+    {
+      "pubid": "10331115",
+      "mean_franq": 0.6288247676994665,
+      "sentences": 4
+    },
+    {
+      "pubid": "17483607",
+      "mean_franq": 0.6054899474304983,
+      "sentences": 5
+    },
+    {
+      "pubid": "28056802",
+      "mean_franq": 0.6423637311603532,
+      "sentences": 7
+    },
+    {
+      "pubid": "11776681",
+      "mean_franq": 0.5345462580692784,
+      "sentences": 4
+    },
+    {
+      "pubid": "24922528",
+      "mean_franq": 0.3461435954839832,
+      "sentences": 9
+    },
+    {
+      "pubid": "8200238",
+      "mean_franq": 0.3774035154425217,
+      "sentences": 8
+    },
+    {
+      "pubid": "10593212",
+      "mean_franq": 0.2933225192658011,
+      "sentences": 9
+    },
+    {
+      "pubid": "12630042",
+      "mean_franq": 0.5120634571618956,
+      "sentences": 5
+    },
+    {
+      "pubid": "24519615",
+      "mean_franq": 0.5729175679007216,
+      "sentences": 5
+    },
+    {
+      "pubid": "24267613",
+      "mean_franq": 0.41627737215982946,
+      "sentences": 13
+    },
+    {
+      "pubid": "21074975",
+      "mean_franq": 0.6616445564770645,
+      "sentences": 4
+    },
+    {
+      "pubid": "19712912",
+      "mean_franq": 0.5690855531615103,
+      "sentences": 8
+    },
+    {
+      "pubid": "12690589",
+      "mean_franq": 0.4764120102842589,
+      "sentences": 4
+    },
+    {
+      "pubid": "10757151",
+      "mean_franq": 0.4394199882466365,
+      "sentences": 8
+    },
+    {
+      "pubid": "15388567",
+      "mean_franq": 0.31953617650017097,
+      "sentences": 12
+    },
+    {
+      "pubid": "10877371",
+      "mean_franq": 0.4698586861520247,
+      "sentences": 5
+    },
+    {
+      "pubid": "22324545",
+      "mean_franq": 0.5078556905771399,
+      "sentences": 7
+    },
+    {
+      "pubid": "19419587",
+      "mean_franq": 0.4288461404970912,
+      "sentences": 3
+    },
+    {
+      "pubid": "16909975",
+      "mean_franq": 0.5120971942657805,
+      "sentences": 7
+    },
+    {
+      "pubid": "18799291",
+      "mean_franq": 0.61471364642998,
+      "sentences": 4
+    },
+    {
+      "pubid": "12163782",
+      "mean_franq": 0.6589639121423714,
+      "sentences": 4
+    },
+    {
+      "pubid": "16392897",
+      "mean_franq": 0.5362190441648634,
+      "sentences": 3
+    },
+    {
+      "pubid": "19615731",
+      "mean_franq": 0.6234721166351747,
+      "sentences": 5
+    },
+    {
+      "pubid": "18537964",
+      "mean_franq": 0.45246808805797006,
+      "sentences": 8
+    },
+    {
+      "pubid": "25747932",
+      "mean_franq": 0.45640940337552915,
+      "sentences": 7
+    },
+    {
+      "pubid": "17445978",
+      "mean_franq": 0.5499336508738231,
+      "sentences": 4
+    },
+    {
+      "pubid": "19309468",
+      "mean_franq": 0.49293059027041847,
+      "sentences": 3
+    },
+    {
+      "pubid": "25885219",
+      "mean_franq": 0.4913472288993747,
+      "sentences": 6
+    },
+    {
+      "pubid": "26348845",
+      "mean_franq": 0.3952407303883567,
+      "sentences": 6
+    },
+    {
+      "pubid": "12221908",
+      "mean_franq": 0.32715684113890797,
+      "sentences": 8
+    },
+    {
+      "pubid": "21904069",
+      "mean_franq": 0.490698812987116,
+      "sentences": 8
+    },
+    {
+      "pubid": "14976655",
+      "mean_franq": 0.551388461078323,
+      "sentences": 6
+    },
+    {
+      "pubid": "22644412",
+      "mean_franq": 0.5233632689748645,
+      "sentences": 6
+    },
+    {
+      "pubid": "26419377",
+      "mean_franq": 0.44657389680874954,
+      "sentences": 7
+    },
+    {
+      "pubid": "23052500",
+      "mean_franq": 0.3998932142570444,
+      "sentences": 12
+    },
+    {
+      "pubid": "26104852",
+      "mean_franq": 0.7599917036931466,
+      "sentences": 4
+    },
+    {
+      "pubid": "9142039",
+      "mean_franq": 0.5252139795752271,
+      "sentences": 3
+    },
+    {
+      "pubid": "18399830",
+      "mean_franq": 0.47056952077776903,
+      "sentences": 5
+    },
+    {
+      "pubid": "18575014",
+      "mean_franq": 0.36377723806035417,
+      "sentences": 3
+    },
+    {
+      "pubid": "15223779",
+      "mean_franq": 0.38365695938098643,
+      "sentences": 14
+    },
+    {
+      "pubid": "24487044",
+      "mean_franq": 0.5483839632855412,
+      "sentences": 5
+    },
+    {
+      "pubid": "12377809",
+      "mean_franq": 0.38700877193607736,
+      "sentences": 7
+    },
+    {
+      "pubid": "16195477",
+      "mean_franq": 0.43170158052880225,
+      "sentences": 7
+    },
+    {
+      "pubid": "16678696",
+      "mean_franq": 0.5622665200134733,
+      "sentences": 3
+    },
+    {
+      "pubid": "18801797",
+      "mean_franq": 0.54176142733643,
+      "sentences": 4
+    },
+    {
+      "pubid": "12153648",
+      "mean_franq": 0.5595253896678969,
+      "sentences": 4
+    },
+    {
+      "pubid": "12632437",
+      "mean_franq": 0.4351354402552276,
+      "sentences": 4
+    },
+    {
+      "pubid": "10201555",
+      "mean_franq": 0.6517097090932413,
+      "sentences": 4
+    },
+    {
+      "pubid": "21342862",
+      "mean_franq": 0.5088758128101594,
+      "sentences": 3
+    },
+    {
+      "pubid": "26818046",
+      "mean_franq": 0.5706879988037479,
+      "sentences": 5
+    },
+    {
+      "pubid": "18005142",
+      "mean_franq": 0.38305381269102434,
+      "sentences": 9
+    },
+    {
+      "pubid": "11481172",
+      "mean_franq": 0.3922853928613054,
+      "sentences": 6
+    },
+    {
+      "pubid": "19230985",
+      "mean_franq": 0.4253240361861077,
+      "sentences": 6
+    },
+    {
+      "pubid": "17295865",
+      "mean_franq": 0.5284460992450742,
+      "sentences": 4
+    },
+    {
+      "pubid": "17565137",
+      "mean_franq": 0.42638143817501034,
+      "sentences": 10
+    },
+    {
+      "pubid": "18041059",
+      "mean_franq": 0.42093466074140684,
+      "sentences": 6
+    },
+    {
+      "pubid": "17274051",
+      "mean_franq": 0.48630011890924335,
+      "sentences": 2
+    },
+    {
+      "pubid": "26460153",
+      "mean_franq": 0.355359975874651,
+      "sentences": 18
+    },
+    {
+      "pubid": "24061619",
+      "mean_franq": 0.6567505668796901,
+      "sentences": 3
+    },
+    {
+      "pubid": "26867834",
+      "mean_franq": 0.6884885951697981,
+      "sentences": 7
+    },
+    {
+      "pubid": "22349635",
+      "mean_franq": 0.4350984063177161,
+      "sentences": 9
+    },
+    {
+      "pubid": "15112004",
+      "mean_franq": 0.4178603095918725,
+      "sentences": 6
+    },
+    {
+      "pubid": "15954832",
+      "mean_franq": 0.6773066723909734,
+      "sentences": 2
+    },
+    {
+      "pubid": "19640728",
+      "mean_franq": 0.4528734253957857,
+      "sentences": 9
+    },
+    {
+      "pubid": "22154448",
+      "mean_franq": 0.5808246545302155,
+      "sentences": 3
+    },
+    {
+      "pubid": "11146778",
+      "mean_franq": 0.3890763086716543,
+      "sentences": 13
+    },
+    {
+      "pubid": "8199520",
+      "mean_franq": 0.26407120473960294,
+      "sentences": 13
+    },
+    {
+      "pubid": "9100537",
+      "mean_franq": 0.45684420141654586,
+      "sentences": 3
+    },
+    {
+      "pubid": "26518378",
+      "mean_franq": 0.4690966658800256,
+      "sentences": 6
+    },
+    {
+      "pubid": "23774337",
+      "mean_franq": 0.5434663811926524,
+      "sentences": 6
+    },
+    {
+      "pubid": "16151770",
+      "mean_franq": 0.578000104903114,
+      "sentences": 5
+    },
+    {
+      "pubid": "26418441",
+      "mean_franq": 0.5541738583773299,
+      "sentences": 2
+    },
+    {
+      "pubid": "20130378",
+      "mean_franq": 0.3785759425274473,
+      "sentences": 5
+    },
+    {
+      "pubid": "11799314",
+      "mean_franq": 0.651862688732656,
+      "sentences": 3
+    },
+    {
+      "pubid": "20828836",
+      "mean_franq": 0.6344581141966388,
+      "sentences": 3
+    },
+    {
+      "pubid": "19608436",
+      "mean_franq": 0.5526696411031093,
+      "sentences": 5
+    },
+    {
+      "pubid": "15995461",
+      "mean_franq": 0.4409390251877947,
+      "sentences": 4
+    },
+    {
+      "pubid": "23224030",
+      "mean_franq": 0.4755048014271044,
+      "sentences": 9
+    },
+    {
+      "pubid": "17910536",
+      "mean_franq": 0.46142338063706273,
+      "sentences": 3
+    },
+    {
+      "pubid": "12070552",
+      "mean_franq": 0.28484198149854956,
+      "sentences": 10
+    },
+    {
+      "pubid": "18182265",
+      "mean_franq": 0.48700110391089074,
+      "sentences": 12
+    },
+    {
+      "pubid": "15841770",
+      "mean_franq": 0.46416446943260387,
+      "sentences": 3
+    },
+    {
+      "pubid": "8017535",
+      "mean_franq": 0.46954899203097883,
+      "sentences": 6
+    },
+    {
+      "pubid": "24172579",
+      "mean_franq": 0.545943824596685,
+      "sentences": 4
+    },
+    {
+      "pubid": "10781708",
+      "mean_franq": 0.40966865599773056,
+      "sentences": 11
+    },
+    {
+      "pubid": "26561905",
+      "mean_franq": 0.4849121637974441,
+      "sentences": 3
+    },
+    {
+      "pubid": "17089900",
+      "mean_franq": 0.5223124154224553,
+      "sentences": 2
+    },
+    {
+      "pubid": "26536001",
+      "mean_franq": 0.730973861861476,
+      "sentences": 3
+    },
+    {
+      "pubid": "19643525",
+      "mean_franq": 0.43462568439128224,
+      "sentences": 4
+    },
+    {
+      "pubid": "26285789",
+      "mean_franq": 0.40729486090054257,
+      "sentences": 8
+    },
+    {
+      "pubid": "22266735",
+      "mean_franq": 0.40342554226776994,
+      "sentences": 8
+    },
+    {
+      "pubid": "15052394",
+      "mean_franq": 0.40935035196395836,
+      "sentences": 8
+    },
+    {
+      "pubid": "23264436",
+      "mean_franq": 0.6414755105616992,
+      "sentences": 5
+    },
+    {
+      "pubid": "22302658",
+      "mean_franq": 0.3944122099693752,
+      "sentences": 8
+    },
+    {
+      "pubid": "17894828",
+      "mean_franq": 0.3646097865396527,
+      "sentences": 11
+    },
+    {
+      "pubid": "18096128",
+      "mean_franq": 0.40405663265150116,
+      "sentences": 6
+    },
+    {
+      "pubid": "12913347",
+      "mean_franq": 0.5498352137678677,
+      "sentences": 3
+    },
+    {
+      "pubid": "24684514",
+      "mean_franq": 0.5488325322635552,
+      "sentences": 6
+    },
+    {
+      "pubid": "24793469",
+      "mean_franq": 0.5865033100858501,
+      "sentences": 5
+    },
+    {
+      "pubid": "23360491",
+      "mean_franq": 0.4690490782621956,
+      "sentences": 3
+    },
+    {
+      "pubid": "10340286",
+      "mean_franq": 0.7202258427035543,
+      "sentences": 6
+    },
+    {
+      "pubid": "22954812",
+      "mean_franq": 0.3617986513221446,
+      "sentences": 8
+    },
+    {
+      "pubid": "18274917",
+      "mean_franq": 0.5222458415522466,
+      "sentences": 7
+    },
+    {
+      "pubid": "22350859",
+      "mean_franq": 0.4526237494537915,
+      "sentences": 3
+    },
+    {
+      "pubid": "26237424",
+      "mean_franq": 0.44691055431475885,
+      "sentences": 8
+    },
+    {
+      "pubid": "15041506",
+      "mean_franq": 0.3645788065172925,
+      "sentences": 5
+    },
+    {
+      "pubid": "25280365",
+      "mean_franq": 0.6392430118015088,
+      "sentences": 6
+    },
+    {
+      "pubid": "20813740",
+      "mean_franq": 0.4141212268016021,
+      "sentences": 10
+    },
+    {
+      "pubid": "20401819",
+      "mean_franq": 0.45611376604103826,
+      "sentences": 13
+    },
+    {
+      "pubid": "7860319",
+      "mean_franq": 0.4105577044547328,
+      "sentences": 6
+    },
+    {
+      "pubid": "25255719",
+      "mean_franq": 0.626073201940977,
+      "sentences": 4
+    },
+    {
+      "pubid": "24352924",
+      "mean_franq": 0.48626005421638824,
+      "sentences": 11
+    },
+    {
+      "pubid": "24973051",
+      "mean_franq": 0.3031007608205483,
+      "sentences": 6
+    },
+    {
+      "pubid": "20497146",
+      "mean_franq": 0.45090402219210834,
+      "sentences": 11
+    },
+    {
+      "pubid": "19401574",
+      "mean_franq": 0.6182783356901167,
+      "sentences": 5
+    },
+    {
+      "pubid": "23571528",
+      "mean_franq": 0.39224113439540165,
+      "sentences": 10
+    },
+    {
+      "pubid": "25228241",
+      "mean_franq": 0.4400657911083792,
+      "sentences": 8
+    },
+    {
+      "pubid": "22348433",
+      "mean_franq": 0.41229558751454204,
+      "sentences": 6
+    },
+    {
+      "pubid": "20538207",
+      "mean_franq": 0.5589903247590883,
+      "sentences": 2
+    },
+    {
+      "pubid": "10927144",
+      "mean_franq": 0.6408767923174516,
+      "sentences": 4
+    },
+    {
+      "pubid": "20197761",
+      "mean_franq": 0.43616937042017145,
+      "sentences": 6
+    },
+    {
+      "pubid": "21394762",
+      "mean_franq": 0.486243417383777,
+      "sentences": 9
+    },
+    {
+      "pubid": "12442934",
+      "mean_franq": 0.6864246194421815,
+      "sentences": 5
+    },
+    {
+      "pubid": "9347843",
+      "mean_franq": 0.4463787007479036,
+      "sentences": 8
+    },
+    {
+      "pubid": "23072266",
+      "mean_franq": 0.7660247186573916,
+      "sentences": 4
+    },
+    {
+      "pubid": "12607666",
+      "mean_franq": 0.4264095572051783,
+      "sentences": 4
+    },
+    {
+      "pubid": "24074624",
+      "mean_franq": 0.4572128045107774,
+      "sentences": 10
+    },
+    {
+      "pubid": "17224424",
+      "mean_franq": 0.4147349660890206,
+      "sentences": 15
+    },
+    {
+      "pubid": "16097998",
+      "mean_franq": 0.46442234016303874,
+      "sentences": 11
+    },
+    {
+      "pubid": "25487603",
+      "mean_franq": 0.42607097214270717,
+      "sentences": 4
+    },
+    {
+      "pubid": "20594006",
+      "mean_franq": 0.4249381563271765,
+      "sentences": 7
+    },
+    {
+      "pubid": "26363639",
+      "mean_franq": 0.4944601549186572,
+      "sentences": 6
+    },
+    {
+      "pubid": "27405146",
+      "mean_franq": 0.3666875988397806,
+      "sentences": 9
+    },
+    {
+      "pubid": "17192736",
+      "mean_franq": 0.5453469940231006,
+      "sentences": 4
+    },
+    {
+      "pubid": "14652839",
+      "mean_franq": 0.48770173372893927,
+      "sentences": 7
+    },
+    {
+      "pubid": "12145243",
+      "mean_franq": 0.42043234768012744,
+      "sentences": 10
+    },
+    {
+      "pubid": "25571931",
+      "mean_franq": 0.3275729420490714,
+      "sentences": 8
+    },
+    {
+      "pubid": "19108857",
+      "mean_franq": 0.5644843219871247,
+      "sentences": 6
+    },
+    {
+      "pubid": "25443385",
+      "mean_franq": 0.5567665602600989,
+      "sentences": 4
+    },
+    {
+      "pubid": "18719011",
+      "mean_franq": 0.3187595955687507,
+      "sentences": 15
+    },
+    {
+      "pubid": "9044116",
+      "mean_franq": 0.3571226670620856,
+      "sentences": 11
+    },
+    {
+      "pubid": "23621776",
+      "mean_franq": 0.5016607803629212,
+      "sentences": 7
+    },
+    {
+      "pubid": "12970636",
+      "mean_franq": 0.6442438533373314,
+      "sentences": 5
+    },
+    {
+      "pubid": "21084567",
+      "mean_franq": 0.4442219765753304,
+      "sentences": 5
+    },
+    {
+      "pubid": "19546588",
+      "mean_franq": 0.5706443101078297,
+      "sentences": 3
+    },
+    {
+      "pubid": "19923859",
+      "mean_franq": 0.5061216989398429,
+      "sentences": 5
+    },
+    {
+      "pubid": "18616781",
+      "mean_franq": 0.6143447700896639,
+      "sentences": 5
+    },
+    {
+      "pubid": "27991408",
+      "mean_franq": 0.38468817229325847,
+      "sentences": 9
+    },
+    {
+      "pubid": "14655021",
+      "mean_franq": 0.3556655936473348,
+      "sentences": 6
+    },
+    {
+      "pubid": "26175531",
+      "mean_franq": 0.4490190049282067,
+      "sentences": 10
+    },
+    {
+      "pubid": "25168472",
+      "mean_franq": 0.4080721998099657,
+      "sentences": 5
+    },
+    {
+      "pubid": "9446993",
+      "mean_franq": 0.5375971785847251,
+      "sentences": 4
+    },
+    {
+      "pubid": "10473855",
+      "mean_franq": 0.5250449714163167,
+      "sentences": 4
+    },
+    {
+      "pubid": "28006766",
+      "mean_franq": 0.522013484161961,
+      "sentences": 10
+    },
+    {
+      "pubid": "11833948",
+      "mean_franq": 0.46997460578399836,
+      "sentences": 6
+    },
+    {
+      "pubid": "27757987",
+      "mean_franq": 0.46601192996051116,
+      "sentences": 15
+    },
+    {
+      "pubid": "16772913",
+      "mean_franq": 0.561784315556464,
+      "sentences": 3
+    },
+    {
+      "pubid": "19575104",
+      "mean_franq": 0.46761850359912166,
+      "sentences": 3
+    },
+    {
+      "pubid": "24449622",
+      "mean_franq": 0.41554668989921023,
+      "sentences": 12
+    },
+    {
+      "pubid": "12095973",
+      "mean_franq": 0.41901830458902917,
+      "sentences": 11
+    },
+    {
+      "pubid": "23761381",
+      "mean_franq": 0.47834677778514917,
+      "sentences": 4
+    },
+    {
+      "pubid": "16971978",
+      "mean_franq": 0.5509567807888538,
+      "sentences": 4
+    },
+    {
+      "pubid": "10375486",
+      "mean_franq": 0.3997650465014033,
+      "sentences": 9
+    },
+    {
+      "pubid": "21558951",
+      "mean_franq": 0.395962094890491,
+      "sentences": 14
+    },
+    {
+      "pubid": "15528969",
+      "mean_franq": 0.37982686673781535,
+      "sentences": 6
+    },
+    {
+      "pubid": "17062225",
+      "mean_franq": 0.6144448180005746,
+      "sentences": 3
+    },
+    {
+      "pubid": "14713788",
+      "mean_franq": 0.32805859129854004,
+      "sentences": 10
+    },
+    {
+      "pubid": "24374414",
+      "mean_franq": 0.6228159893532612,
+      "sentences": 4
+    },
+    {
+      "pubid": "20736887",
+      "mean_franq": 0.4390352012899918,
+      "sentences": 6
+    },
+    {
+      "pubid": "22504515",
+      "mean_franq": 0.6771017157187891,
+      "sentences": 4
+    },
+    {
+      "pubid": "10577397",
+      "mean_franq": 0.38542099334872587,
+      "sentences": 13
+    },
+    {
+      "pubid": "15369037",
+      "mean_franq": 0.5415381236732992,
+      "sentences": 4
+    },
+    {
+      "pubid": "24073931",
+      "mean_franq": 0.5998021616571022,
+      "sentences": 3
+    },
+    {
+      "pubid": "18472368",
+      "mean_franq": 0.35211872694516255,
+      "sentences": 4
+    },
+    {
+      "pubid": "23992109",
+      "mean_franq": 0.4617433742655117,
+      "sentences": 5
+    },
+    {
+      "pubid": "21164063",
+      "mean_franq": 0.5673154585511627,
+      "sentences": 6
+    },
+    {
+      "pubid": "21951591",
+      "mean_franq": 0.3654929206344658,
+      "sentences": 11
+    },
+    {
+      "pubid": "18619710",
+      "mean_franq": 0.5300990294368184,
+      "sentences": 3
+    },
+    {
+      "pubid": "18784527",
+      "mean_franq": 0.6702100688162251,
+      "sentences": 4
+    },
+    {
+      "pubid": "15919266",
+      "mean_franq": 0.6386611329127809,
+      "sentences": 5
+    },
+    {
+      "pubid": "2503176",
+      "mean_franq": 0.4998289151250508,
+      "sentences": 5
+    },
+    {
+      "pubid": "22108230",
+      "mean_franq": 0.6324684432734625,
+      "sentences": 3
+    },
+    {
+      "pubid": "20338971",
+      "mean_franq": 0.6872098889320242,
+      "sentences": 4
+    },
+    {
+      "pubid": "17276801",
+      "mean_franq": 0.7347834127408513,
+      "sentences": 5
+    },
+    {
+      "pubid": "20497880",
+      "mean_franq": 0.5325268857319837,
+      "sentences": 3
+    },
+    {
+      "pubid": "23495128",
+      "mean_franq": 0.43961876062033256,
+      "sentences": 4
+    },
+    {
+      "pubid": "26701174",
+      "mean_franq": 0.43402037129807264,
+      "sentences": 14
+    },
+    {
+      "pubid": "24695920",
+      "mean_franq": 0.6368254578986454,
+      "sentences": 5
+    },
+    {
+      "pubid": "15488260",
+      "mean_franq": 0.41480304788800926,
+      "sentences": 8
+    },
+    {
+      "pubid": "15466981",
+      "mean_franq": 0.3425085356043907,
+      "sentences": 6
+    },
+    {
+      "pubid": "18603989",
+      "mean_franq": 0.5216024726824666,
+      "sentences": 4
+    },
+    {
+      "pubid": "21789019",
+      "mean_franq": 0.39653156678219986,
+      "sentences": 10
+    },
+    {
+      "pubid": "14692023",
+      "mean_franq": 0.32245000368740906,
+      "sentences": 10
+    },
+    {
+      "pubid": "25150098",
+      "mean_franq": 0.43920473433066537,
+      "sentences": 7
+    },
+    {
+      "pubid": "20337874",
+      "mean_franq": 0.4648102791743539,
+      "sentences": 7
+    },
+    {
+      "pubid": "19198736",
+      "mean_franq": 0.5241105145053988,
+      "sentences": 4
+    },
+    {
+      "pubid": "22411435",
+      "mean_franq": 0.6400158054588023,
+      "sentences": 4
+    },
+    {
+      "pubid": "16266387",
+      "mean_franq": 0.5075599387752444,
+      "sentences": 5
+    },
+    {
+      "pubid": "23792130",
+      "mean_franq": 0.554705759160142,
+      "sentences": 5
+    },
+    {
+      "pubid": "17462393",
+      "mean_franq": 0.45563870636258813,
+      "sentences": 14
+    },
+    {
+      "pubid": "21457946",
+      "mean_franq": 0.5079992077090564,
+      "sentences": 3
+    },
+    {
+      "pubid": "26383908",
+      "mean_franq": 0.3998514322738642,
+      "sentences": 6
+    },
+    {
+      "pubid": "19481382",
+      "mean_franq": 0.5920849692381474,
+      "sentences": 5
+    },
+    {
+      "pubid": "25699562",
+      "mean_franq": 0.6816221684140268,
+      "sentences": 3
+    },
+    {
+      "pubid": "17682349",
+      "mean_franq": 0.5516067867362819,
+      "sentences": 4
+    },
+    {
+      "pubid": "18251357",
+      "mean_franq": 0.4381135263866709,
+      "sentences": 9
+    },
+    {
+      "pubid": "20971618",
+      "mean_franq": 0.37075823272087877,
+      "sentences": 6
+    },
+    {
+      "pubid": "19648304",
+      "mean_franq": 0.4542007825998396,
+      "sentences": 3
+    },
+    {
+      "pubid": "23222920",
+      "mean_franq": 0.492212908377617,
+      "sentences": 5
+    },
+    {
+      "pubid": "21864397",
+      "mean_franq": 0.35959348827856524,
+      "sentences": 7
+    },
+    {
+      "pubid": "26601554",
+      "mean_franq": 0.4965315563835843,
+      "sentences": 3
+    },
+    {
+      "pubid": "19322056",
+      "mean_franq": 0.4375474348921454,
+      "sentences": 9
+    },
+    {
+      "pubid": "22522271",
+      "mean_franq": 0.4278834353397831,
+      "sentences": 12
+    },
+    {
+      "pubid": "9363529",
+      "mean_franq": 0.46803396615003207,
+      "sentences": 6
+    },
+    {
+      "pubid": "15962678",
+      "mean_franq": 0.6462538458291708,
+      "sentences": 6
+    },
+    {
+      "pubid": "7547656",
+      "mean_franq": 0.6046314829926155,
+      "sentences": 3
+    },
+    {
+      "pubid": "24235894",
+      "mean_franq": 0.4163073121057533,
+      "sentences": 5
+    },
+    {
+      "pubid": "17429333",
+      "mean_franq": 0.3791234144236636,
+      "sentences": 9
+    },
+    {
+      "pubid": "19156007",
+      "mean_franq": 0.4900795084846818,
+      "sentences": 6
+    },
+    {
+      "pubid": "9603166",
+      "mean_franq": 0.41285770313594927,
+      "sentences": 8
+    },
+    {
+      "pubid": "24298614",
+      "mean_franq": 0.39474679922572437,
+      "sentences": 9
+    },
+    {
+      "pubid": "21849531",
+      "mean_franq": 0.3140777789537691,
+      "sentences": 15
+    },
+    {
+      "pubid": "19854401",
+      "mean_franq": 0.3795747393163577,
+      "sentences": 9
+    },
+    {
+      "pubid": "22237146",
+      "mean_franq": 0.5077368359682505,
+      "sentences": 5
+    },
+    {
+      "pubid": "25793749",
+      "mean_franq": 0.47686178061482,
+      "sentences": 7
+    },
+    {
+      "pubid": "15095519",
+      "mean_franq": 0.5894802140287124,
+      "sentences": 4
+    },
+    {
+      "pubid": "25981682",
+      "mean_franq": 0.3672630196891907,
+      "sentences": 12
+    },
+    {
+      "pubid": "18284441",
+      "mean_franq": 0.42628602341700744,
+      "sentences": 6
+    },
+    {
+      "pubid": "10173769",
+      "mean_franq": 0.49351124052305534,
+      "sentences": 4
+    },
+    {
+      "pubid": "20354380",
+      "mean_franq": 0.5849918609931374,
+      "sentences": 3
+    },
+    {
+      "pubid": "9616411",
+      "mean_franq": 0.5833053300379817,
+      "sentences": 3
+    },
+    {
+      "pubid": "22205377",
+      "mean_franq": 0.4021922183542676,
+      "sentences": 5
+    },
+    {
+      "pubid": "16241924",
+      "mean_franq": 0.5128334062602328,
+      "sentences": 4
+    },
+    {
+      "pubid": "12484580",
+      "mean_franq": 0.38867733924744585,
+      "sentences": 3
+    },
+    {
+      "pubid": "24599411",
+      "mean_franq": 0.6619218796544519,
+      "sentences": 3
+    },
+    {
+      "pubid": "23860049",
+      "mean_franq": 0.3262489937550211,
+      "sentences": 6
+    },
+    {
+      "pubid": "7664228",
+      "mean_franq": 0.34422793013139535,
+      "sentences": 6
+    },
+    {
+      "pubid": "22233470",
+      "mean_franq": 0.48988905781251524,
+      "sentences": 4
+    },
+    {
+      "pubid": "17971187",
+      "mean_franq": 0.38040831149311316,
+      "sentences": 5
+    },
+    {
+      "pubid": "27394685",
+      "mean_franq": 0.4692384224889306,
+      "sentences": 5
+    },
+    {
+      "pubid": "25079920",
+      "mean_franq": 0.4243485020408164,
+      "sentences": 9
+    },
+    {
+      "pubid": "17355582",
+      "mean_franq": 0.4576922413875337,
+      "sentences": 9
+    },
+    {
+      "pubid": "20736672",
+      "mean_franq": 0.34256596471775724,
+      "sentences": 6
+    },
+    {
+      "pubid": "12419743",
+      "mean_franq": 0.45054757485301344,
+      "sentences": 8
+    },
+    {
+      "pubid": "10973547",
+      "mean_franq": 0.3713037174774765,
+      "sentences": 6
+    },
+    {
+      "pubid": "25499207",
+      "mean_franq": 0.46904809962586524,
+      "sentences": 4
+    },
+    {
+      "pubid": "26133538",
+      "mean_franq": 0.6340148626294584,
+      "sentences": 3
+    },
+    {
+      "pubid": "26163474",
+      "mean_franq": 0.40296805805088315,
+      "sentences": 12
+    },
+    {
+      "pubid": "14968373",
+      "mean_franq": 0.7484726980541709,
+      "sentences": 4
+    },
+    {
+      "pubid": "24698298",
+      "mean_franq": 0.582420717621917,
+      "sentences": 6
+    },
+    {
+      "pubid": "23088164",
+      "mean_franq": 0.4440241930361864,
+      "sentences": 6
+    },
+    {
+      "pubid": "24481006",
+      "mean_franq": 0.6203228900171038,
+      "sentences": 4
+    },
+    {
+      "pubid": "17032327",
+      "mean_franq": 0.4105025662282379,
+      "sentences": 9
+    },
+    {
+      "pubid": "22658587",
+      "mean_franq": 0.319755269425047,
+      "sentences": 6
+    },
+    {
+      "pubid": "8916748",
+      "mean_franq": 0.49230192605219764,
+      "sentences": 12
+    },
+    {
+      "pubid": "16361634",
+      "mean_franq": 0.33068390253430574,
+      "sentences": 9
+    },
+    {
+      "pubid": "25756710",
+      "mean_franq": 0.3840950651967295,
+      "sentences": 10
+    },
+    {
+      "pubid": "23916653",
+      "mean_franq": 0.685380212102261,
+      "sentences": 4
+    },
+    {
+      "pubid": "12790890",
+      "mean_franq": 0.6704871030353275,
+      "sentences": 4
+    },
+    {
+      "pubid": "23449952",
+      "mean_franq": 0.4475815607117443,
+      "sentences": 12
+    },
+    {
+      "pubid": "10430303",
+      "mean_franq": 0.4130979192086349,
+      "sentences": 8
+    },
+    {
+      "pubid": "20605051",
+      "mean_franq": 0.4503731754906027,
+      "sentences": 8
+    },
+    {
+      "pubid": "23048048",
+      "mean_franq": 0.44120798885109014,
+      "sentences": 7
+    },
+    {
+      "pubid": "16991071",
+      "mean_franq": 0.37538866616249983,
+      "sentences": 7
+    },
+    {
+      "pubid": "12090319",
+      "mean_franq": 0.4608235016381873,
+      "sentences": 9
+    },
+    {
+      "pubid": "24614851",
+      "mean_franq": 0.4843428312971734,
+      "sentences": 3
+    },
+    {
+      "pubid": "17578985",
+      "mean_franq": 0.7128347116500536,
+      "sentences": 4
+    },
+    {
+      "pubid": "26965932",
+      "mean_franq": 0.39321141409727217,
+      "sentences": 12
+    },
+    {
+      "pubid": "15137012",
+      "mean_franq": 0.4492320199180214,
+      "sentences": 7
+    },
+    {
+      "pubid": "21194998",
+      "mean_franq": 0.29862067253562635,
+      "sentences": 12
+    },
+    {
+      "pubid": "15787677",
+      "mean_franq": 0.3816854321036987,
+      "sentences": 4
+    },
+    {
+      "pubid": "24625433",
+      "mean_franq": 0.46408026326278107,
+      "sentences": 4
+    },
+    {
+      "pubid": "25304452",
+      "mean_franq": 0.3527832316835364,
+      "sentences": 12
+    },
+    {
+      "pubid": "19711462",
+      "mean_franq": 0.431488420889736,
+      "sentences": 3
+    },
+    {
+      "pubid": "28196511",
+      "mean_franq": 0.6759619089829527,
+      "sentences": 5
+    },
+    {
+      "pubid": "24591144",
+      "mean_franq": 0.3478856407071876,
+      "sentences": 6
+    },
+    {
+      "pubid": "21431987",
+      "mean_franq": 0.49807800134234687,
+      "sentences": 7
+    },
+    {
+      "pubid": "18928979",
+      "mean_franq": 0.5971772410681746,
+      "sentences": 4
+    },
+    {
+      "pubid": "25752725",
+      "mean_franq": 0.3746838961141526,
+      "sentences": 6
+    },
+    {
+      "pubid": "12855939",
+      "mean_franq": 0.46645572164098853,
+      "sentences": 4
+    },
+    {
+      "pubid": "24476003",
+      "mean_franq": 0.3991665841036987,
+      "sentences": 10
+    },
+    {
+      "pubid": "24606627",
+      "mean_franq": 0.44949132175346423,
+      "sentences": 4
+    },
+    {
+      "pubid": "23386371",
+      "mean_franq": 0.5744989030695372,
+      "sentences": 5
+    },
+    {
+      "pubid": "10922093",
+      "mean_franq": 0.4481989331466399,
+      "sentences": 3
+    },
+    {
+      "pubid": "20602101",
+      "mean_franq": 0.4516612689950806,
+      "sentences": 7
+    },
+    {
+      "pubid": "18065862",
+      "mean_franq": 0.5043507177449684,
+      "sentences": 3
+    },
+    {
+      "pubid": "9569972",
+      "mean_franq": 0.5285655061305287,
+      "sentences": 3
+    },
+    {
+      "pubid": "25406780",
+      "mean_franq": 0.5266158580584739,
+      "sentences": 5
+    },
+    {
+      "pubid": "20629769",
+      "mean_franq": 0.5405593976057945,
+      "sentences": 2
+    },
+    {
+      "pubid": "23149821",
+      "mean_franq": 0.3960223661923041,
+      "sentences": 13
+    },
+    {
+      "pubid": "11483547",
+      "mean_franq": 0.5427253752263158,
+      "sentences": 6
+    },
+    {
+      "pubid": "27884344",
+      "mean_franq": 0.39380092363625246,
+      "sentences": 6
+    },
+    {
+      "pubid": "18800356",
+      "mean_franq": 0.548284978009554,
+      "sentences": 3
+    },
+    {
+      "pubid": "22301406",
+      "mean_franq": 0.4162914072578005,
+      "sentences": 11
+    },
+    {
+      "pubid": "26079501",
+      "mean_franq": 0.4155163929365577,
+      "sentences": 11
+    },
+    {
+      "pubid": "15774570",
+      "mean_franq": 0.4918452247571074,
+      "sentences": 3
+    },
+    {
+      "pubid": "18319270",
+      "mean_franq": 0.5624758485126564,
+      "sentences": 4
+    },
+    {
+      "pubid": "26209118",
+      "mean_franq": 0.8142675005613661,
+      "sentences": 5
+    },
+    {
+      "pubid": "11713724",
+      "mean_franq": 0.4211923642236204,
+      "sentences": 8
+    },
+    {
+      "pubid": "25070942",
+      "mean_franq": 0.39972989644661855,
+      "sentences": 7
+    },
+    {
+      "pubid": "19683101",
+      "mean_franq": 0.5605299833823848,
+      "sentences": 4
+    },
+    {
+      "pubid": "10783841",
+      "mean_franq": 0.45739647718418186,
+      "sentences": 12
+    },
+    {
+      "pubid": "11862129",
+      "mean_franq": 0.6306401732473451,
+      "sentences": 4
+    },
+    {
+      "pubid": "23455575",
+      "mean_franq": 0.34085810639933695,
+      "sentences": 6
+    },
+    {
+      "pubid": "21848798",
+      "mean_franq": 0.4417269723601055,
+      "sentences": 10
+    },
+    {
+      "pubid": "25103647",
+      "mean_franq": 0.36622511539611324,
+      "sentences": 9
+    },
+    {
+      "pubid": "19406119",
+      "mean_franq": 0.37694745143343866,
+      "sentences": 8
+    },
+    {
+      "pubid": "24359102",
+      "mean_franq": 0.529977847196882,
+      "sentences": 9
+    },
+    {
+      "pubid": "18802997",
+      "mean_franq": 0.5266191251649331,
+      "sentences": 5
+    },
+    {
+      "pubid": "26304701",
+      "mean_franq": 0.4154814217393238,
+      "sentences": 17
+    },
+    {
+      "pubid": "19058191",
+      "mean_franq": 0.4140199459734613,
+      "sentences": 4
+    },
+    {
+      "pubid": "27549226",
+      "mean_franq": 0.4284144872803688,
+      "sentences": 6
+    },
+    {
+      "pubid": "24799031",
+      "mean_franq": 0.4014853565667648,
+      "sentences": 10
+    },
+    {
+      "pubid": "25043083",
+      "mean_franq": 0.45813446488323867,
+      "sentences": 3
+    },
+    {
+      "pubid": "26516021",
+      "mean_franq": 0.3916764773219328,
+      "sentences": 8
+    },
+    {
+      "pubid": "23736032",
+      "mean_franq": 0.26761802781753924,
+      "sentences": 8
+    },
+    {
+      "pubid": "17312514",
+      "mean_franq": 0.608749300354298,
+      "sentences": 3
+    },
+    {
+      "pubid": "23002947",
+      "mean_franq": 0.3957448314107536,
+      "sentences": 11
+    },
+    {
+      "pubid": "23453079",
+      "mean_franq": 0.5795630463564339,
+      "sentences": 6
+    },
+    {
+      "pubid": "15053041",
+      "mean_franq": 0.7380314531823247,
+      "sentences": 5
+    },
+    {
+      "pubid": "9465206",
+      "mean_franq": 0.39198581562244084,
+      "sentences": 10
+    },
+    {
+      "pubid": "19593710",
+      "mean_franq": 0.4093391620539738,
+      "sentences": 4
+    },
+    {
+      "pubid": "8521557",
+      "mean_franq": 0.4009903301517621,
+      "sentences": 15
+    },
+    {
+      "pubid": "24340838",
+      "mean_franq": 0.6662061420883864,
+      "sentences": 4
+    },
+    {
+      "pubid": "24751724",
+      "mean_franq": 0.3519942045024273,
+      "sentences": 6
+    },
+    {
+      "pubid": "21368683",
+      "mean_franq": 0.5058859064274978,
+      "sentences": 6
+    },
+    {
+      "pubid": "27832831",
+      "mean_franq": 0.582018540244935,
+      "sentences": 5
+    },
+    {
+      "pubid": "15208005",
+      "mean_franq": 0.3792110861242023,
+      "sentences": 10
+    },
+    {
+      "pubid": "24958650",
+      "mean_franq": 0.6640266073510487,
+      "sentences": 4
+    },
+    {
+      "pubid": "16713745",
+      "mean_franq": 0.48610867405020114,
+      "sentences": 8
+    },
+    {
+      "pubid": "24669960",
+      "mean_franq": 0.3505152679230172,
+      "sentences": 10
+    },
+    {
+      "pubid": "9278754",
+      "mean_franq": 0.3789320046227861,
+      "sentences": 8
+    },
+    {
+      "pubid": "8738894",
+      "mean_franq": 0.6128256755537997,
+      "sentences": 5
+    },
+    {
+      "pubid": "24671913",
+      "mean_franq": 0.5946305191100206,
+      "sentences": 3
+    },
+    {
+      "pubid": "22540518",
+      "mean_franq": 0.4307987980075088,
+      "sentences": 6
+    },
+    {
+      "pubid": "16538201",
+      "mean_franq": 0.45630881077884494,
+      "sentences": 15
+    },
+    {
+      "pubid": "17054994",
+      "mean_franq": 0.3678467019521059,
+      "sentences": 6
+    },
+    {
+      "pubid": "26999038",
+      "mean_franq": 0.5635417669993983,
+      "sentences": 5
+    },
+    {
+      "pubid": "23598835",
+      "mean_franq": 0.5611947223965579,
+      "sentences": 3
+    },
+    {
+      "pubid": "17890090",
+      "mean_franq": 0.34330583079046806,
+      "sentences": 9
+    },
+    {
+      "pubid": "22813804",
+      "mean_franq": 0.4454225483944585,
+      "sentences": 6
+    },
+    {
+      "pubid": "26923375",
+      "mean_franq": 0.7322396051587051,
+      "sentences": 5
+    },
+    {
+      "pubid": "20304513",
+      "mean_franq": 0.5431152581660215,
+      "sentences": 7
+    },
+    {
+      "pubid": "21689015",
+      "mean_franq": 0.708115141901114,
+      "sentences": 4
+    },
+    {
+      "pubid": "10811329",
+      "mean_franq": 0.7080498605208448,
+      "sentences": 5
+    },
+    {
+      "pubid": "10834864",
+      "mean_franq": 0.7157778492206229,
+      "sentences": 4
+    },
+    {
+      "pubid": "27909738",
+      "mean_franq": 0.6169243257965803,
+      "sentences": 6
+    },
+    {
+      "pubid": "26063028",
+      "mean_franq": 0.43880205198307304,
+      "sentences": 8
+    },
+    {
+      "pubid": "25034219",
+      "mean_franq": 0.3372609943798296,
+      "sentences": 8
+    },
+    {
+      "pubid": "25521278",
+      "mean_franq": 0.48335065051770315,
+      "sentences": 3
+    },
+    {
+      "pubid": "27908583",
+      "mean_franq": 0.36855890773788,
+      "sentences": 10
+    },
+    {
+      "pubid": "23422012",
+      "mean_franq": 0.48121492959047324,
+      "sentences": 5
+    },
+    {
+      "pubid": "11500608",
+      "mean_franq": 0.5940219590049957,
+      "sentences": 4
+    },
+    {
+      "pubid": "8111516",
+      "mean_franq": 0.5467565406694632,
+      "sentences": 5
+    },
+    {
+      "pubid": "25604390",
+      "mean_franq": 0.5889914313279877,
+      "sentences": 3
+    },
+    {
+      "pubid": "25985014",
+      "mean_franq": 0.45994737136089725,
+      "sentences": 6
+    },
+    {
+      "pubid": "14627582",
+      "mean_franq": 0.445645642804955,
+      "sentences": 4
+    },
+    {
+      "pubid": "18570208",
+      "mean_franq": 0.5713428679804236,
+      "sentences": 3
+    },
+    {
+      "pubid": "23448747",
+      "mean_franq": 0.43304541677638814,
+      "sentences": 6
+    },
+    {
+      "pubid": "20156655",
+      "mean_franq": 0.380789754616703,
+      "sentences": 8
+    },
+    {
+      "pubid": "16147837",
+      "mean_franq": 0.6571973557085496,
+      "sentences": 3
+    },
+    {
+      "pubid": "16249670",
+      "mean_franq": 0.5041089186822378,
+      "sentences": 4
+    },
+    {
+      "pubid": "24495711",
+      "mean_franq": 0.44618494250427326,
+      "sentences": 10
+    },
+    {
+      "pubid": "20101129",
+      "mean_franq": 0.5681458497559729,
+      "sentences": 5
+    },
+    {
+      "pubid": "17593459",
+      "mean_franq": 0.37891004598226297,
+      "sentences": 6
+    },
+    {
+      "pubid": "24577079",
+      "mean_franq": 0.44813194839726406,
+      "sentences": 3
+    },
+    {
+      "pubid": "9582182",
+      "mean_franq": 0.403767612820809,
+      "sentences": 6
+    },
+    {
+      "pubid": "17715311",
+      "mean_franq": 0.6620567364273598,
+      "sentences": 6
+    },
+    {
+      "pubid": "12094116",
+      "mean_franq": 0.3055103452242613,
+      "sentences": 10
+    },
+    {
+      "pubid": "19430778",
+      "mean_franq": 0.3280167051400851,
+      "sentences": 9
+    },
+    {
+      "pubid": "12848629",
+      "mean_franq": 0.5380308201532932,
+      "sentences": 3
+    },
+    {
+      "pubid": "10732884",
+      "mean_franq": 0.4540971919294075,
+      "sentences": 11
+    },
+    {
+      "pubid": "23568387",
+      "mean_franq": 0.4710773804843346,
+      "sentences": 12
+    },
+    {
+      "pubid": "25675614",
+      "mean_franq": 0.5983724372227305,
+      "sentences": 3
+    },
+    {
+      "pubid": "26864326",
+      "mean_franq": 0.3178155899959567,
+      "sentences": 13
+    },
+    {
+      "pubid": "26784147",
+      "mean_franq": 0.625136389078424,
+      "sentences": 3
+    },
+    {
+      "pubid": "20850631",
+      "mean_franq": 0.5035516562092952,
+      "sentences": 8
+    },
+    {
+      "pubid": "22849512",
+      "mean_franq": 0.44954055472507337,
+      "sentences": 11
+    },
+    {
+      "pubid": "27642458",
+      "mean_franq": 0.7657453073350292,
+      "sentences": 3
+    },
+    {
+      "pubid": "17403428",
+      "mean_franq": 0.6318524543962263,
+      "sentences": 5
+    },
+    {
+      "pubid": "21252642",
+      "mean_franq": 0.32334372788887444,
+      "sentences": 7
+    },
+    {
+      "pubid": "25503376",
+      "mean_franq": 0.4997525305955755,
+      "sentences": 12
+    },
+    {
+      "pubid": "12172698",
+      "mean_franq": 0.3701536027356971,
+      "sentences": 6
+    },
+    {
+      "pubid": "19351635",
+      "mean_franq": 0.41441835663383464,
+      "sentences": 11
+    },
+    {
+      "pubid": "17551944",
+      "mean_franq": 0.42915085529901226,
+      "sentences": 9
+    },
+    {
+      "pubid": "17606778",
+      "mean_franq": 0.5482169914841352,
+      "sentences": 5
+    },
+    {
+      "pubid": "24318956",
+      "mean_franq": 0.6148501324119396,
+      "sentences": 4
+    },
+    {
+      "pubid": "26044262",
+      "mean_franq": 0.4694461274383919,
+      "sentences": 7
+    },
+    {
+      "pubid": "20011163",
+      "mean_franq": 0.468534202027998,
+      "sentences": 5
+    },
+    {
+      "pubid": "16735905",
+      "mean_franq": 0.6003437721330614,
+      "sentences": 3
+    },
+    {
+      "pubid": "18670651",
+      "mean_franq": 0.48696215411485266,
+      "sentences": 19
+    },
+    {
+      "pubid": "11034241",
+      "mean_franq": 0.41204987814819927,
+      "sentences": 9
+    },
+    {
+      "pubid": "24013712",
+      "mean_franq": 0.4796299496070792,
+      "sentences": 15
+    },
+    {
+      "pubid": "23240452",
+      "mean_franq": 0.49376527561071165,
+      "sentences": 3
+    },
+    {
+      "pubid": "21420186",
+      "mean_franq": 0.31648533643897997,
+      "sentences": 10
+    },
+    {
+      "pubid": "22302761",
+      "mean_franq": 0.5601088269160642,
+      "sentences": 5
+    },
+    {
+      "pubid": "21979183",
+      "mean_franq": 0.5072397467323391,
+      "sentences": 6
+    },
+    {
+      "pubid": "12607120",
+      "mean_franq": 0.4077791129005983,
+      "sentences": 10
+    },
+    {
+      "pubid": "21914194",
+      "mean_franq": 0.6220551184317572,
+      "sentences": 7
+    },
+    {
+      "pubid": "25725704",
+      "mean_franq": 0.4973164608907794,
+      "sentences": 4
+    },
+    {
+      "pubid": "24516646",
+      "mean_franq": 0.6578976681423824,
+      "sentences": 6
+    },
+    {
+      "pubid": "28247485",
+      "mean_franq": 0.7330282094612401,
+      "sentences": 5
+    },
+    {
+      "pubid": "11334578",
+      "mean_franq": 0.3437495963545717,
+      "sentences": 8
+    },
+    {
+      "pubid": "21593045",
+      "mean_franq": 0.5695943793877628,
+      "sentences": 4
+    },
+    {
+      "pubid": "22902073",
+      "mean_franq": 0.3943808839651902,
+      "sentences": 5
+    },
+    {
+      "pubid": "26471488",
+      "mean_franq": 0.4196389973234118,
+      "sentences": 8
+    },
+    {
+      "pubid": "16647887",
+      "mean_franq": 0.49300288507204887,
+      "sentences": 6
+    },
+    {
+      "pubid": "22668712",
+      "mean_franq": 0.4001452381697921,
+      "sentences": 10
+    },
+    {
+      "pubid": "18439500",
+      "mean_franq": 0.4206866519011306,
+      "sentences": 7
+    },
+    {
+      "pubid": "23347337",
+      "mean_franq": 0.5757504677407431,
+      "sentences": 6
+    },
+    {
+      "pubid": "22970993",
+      "mean_franq": 0.5975153781786933,
+      "sentences": 4
+    },
+    {
+      "pubid": "16498158",
+      "mean_franq": 0.3629418275854273,
+      "sentences": 6
+    },
+    {
+      "pubid": "24622801",
+      "mean_franq": 0.38563854656574287,
+      "sentences": 8
+    },
+    {
+      "pubid": "15000338",
+      "mean_franq": 0.3099265275806513,
+      "sentences": 8
+    },
+    {
+      "pubid": "22491528",
+      "mean_franq": 0.33370202014480876,
+      "sentences": 10
+    },
+    {
+      "pubid": "11247896",
+      "mean_franq": 0.4570855235398075,
+      "sentences": 7
+    },
+    {
+      "pubid": "19145527",
+      "mean_franq": 0.3612921784043201,
+      "sentences": 6
+    },
+    {
+      "pubid": "18568239",
+      "mean_franq": 0.4559692197349167,
+      "sentences": 5
+    },
+    {
+      "pubid": "22075911",
+      "mean_franq": 0.5456400112871881,
+      "sentences": 8
+    },
+    {
+      "pubid": "10401824",
+      "mean_franq": 0.6429600807562708,
+      "sentences": 4
+    },
+    {
+      "pubid": "21880023",
+      "mean_franq": 0.47157594405898196,
+      "sentences": 4
+    },
+    {
+      "pubid": "21726930",
+      "mean_franq": 0.5281918323047347,
+      "sentences": 8
+    },
+    {
+      "pubid": "22768311",
+      "mean_franq": 0.5464642771527711,
+      "sentences": 4
+    },
+    {
+      "pubid": "25636371",
+      "mean_franq": 0.5636034563167167,
+      "sentences": 3
+    },
+    {
+      "pubid": "15050326",
+      "mean_franq": 0.7793319931718126,
+      "sentences": 4
+    },
+    {
+      "pubid": "23412195",
+      "mean_franq": 0.37359745630332736,
+      "sentences": 10
+    },
+    {
+      "pubid": "16968183",
+      "mean_franq": 0.4339522499284433,
+      "sentences": 5
+    },
+    {
+      "pubid": "23359100",
+      "mean_franq": 0.5740801666987698,
+      "sentences": 7
+    },
+    {
+      "pubid": "15943725",
+      "mean_franq": 0.45796801974401674,
+      "sentences": 8
+    },
+    {
+      "pubid": "25735444",
+      "mean_franq": 0.5264669537614326,
+      "sentences": 4
+    },
+    {
+      "pubid": "9722752",
+      "mean_franq": 0.5680030652956387,
+      "sentences": 4
+    },
+    {
+      "pubid": "23870157",
+      "mean_franq": 0.36156259753369707,
+      "sentences": 7
+    },
+    {
+      "pubid": "22303473",
+      "mean_franq": 0.5000692365273957,
+      "sentences": 5
+    },
+    {
+      "pubid": "24995509",
+      "mean_franq": 0.425541503261828,
+      "sentences": 6
+    },
+    {
+      "pubid": "24270957",
+      "mean_franq": 0.4490789492770304,
+      "sentences": 8
+    },
+    {
+      "pubid": "23848044",
+      "mean_franq": 0.43463828676706073,
+      "sentences": 4
+    },
+    {
+      "pubid": "9920954",
+      "mean_franq": 0.3571416543847522,
+      "sentences": 10
+    },
+    {
+      "pubid": "21276532",
+      "mean_franq": 0.31107063044425143,
+      "sentences": 13
+    },
+    {
+      "pubid": "23379759",
+      "mean_franq": 0.528559179685325,
+      "sentences": 4
+    },
+    {
+      "pubid": "25891436",
+      "mean_franq": 0.6832688973616374,
+      "sentences": 4
+    },
+    {
+      "pubid": "24450673",
+      "mean_franq": 0.33553469816325493,
+      "sentences": 14
+    },
+    {
+      "pubid": "17914515",
+      "mean_franq": 0.424639854248419,
+      "sentences": 9
+    },
+    {
+      "pubid": "24739448",
+      "mean_franq": 0.6212283618584294,
+      "sentences": 4
+    },
+    {
+      "pubid": "19444061",
+      "mean_franq": 0.4088834629607803,
+      "sentences": 6
+    },
+    {
+      "pubid": "25669733",
+      "mean_franq": 0.682033609814994,
+      "sentences": 4
+    },
+    {
+      "pubid": "20577124",
+      "mean_franq": 0.5096221682211806,
+      "sentences": 8
+    },
+    {
+      "pubid": "21592383",
+      "mean_franq": 0.342522421153349,
+      "sentences": 9
+    },
+    {
+      "pubid": "11053064",
+      "mean_franq": 0.384878251069378,
+      "sentences": 9
+    },
+    {
+      "pubid": "9745063",
+      "mean_franq": 0.40891041387562194,
+      "sentences": 11
+    },
+    {
+      "pubid": "11138995",
+      "mean_franq": 0.49715827091588877,
+      "sentences": 10
+    },
+    {
+      "pubid": "15475728",
+      "mean_franq": 0.3154892971758016,
+      "sentences": 8
+    },
+    {
+      "pubid": "12121321",
+      "mean_franq": 0.4920245719403833,
+      "sentences": 4
+    },
+    {
+      "pubid": "17342562",
+      "mean_franq": 0.4495440368691137,
+      "sentences": 6
+    },
+    {
+      "pubid": "28011794",
+      "mean_franq": 0.4217931031233617,
+      "sentences": 8
+    },
+    {
+      "pubid": "24098953",
+      "mean_franq": 0.4994897592115896,
+      "sentences": 9
+    },
+    {
+      "pubid": "24827404",
+      "mean_franq": 0.5723266360885252,
+      "sentences": 3
+    },
+    {
+      "pubid": "28407529",
+      "mean_franq": 0.4026360641656939,
+      "sentences": 9
+    },
+    {
+      "pubid": "27928673",
+      "mean_franq": 0.38716005610849624,
+      "sentences": 6
+    },
+    {
+      "pubid": "22011946",
+      "mean_franq": 0.5876210957517106,
+      "sentences": 7
+    },
+    {
+      "pubid": "23517744",
+      "mean_franq": 0.39948672587313966,
+      "sentences": 11
+    },
+    {
+      "pubid": "20842006",
+      "mean_franq": 0.5714946707078888,
+      "sentences": 4
+    },
+    {
+      "pubid": "9140335",
+      "mean_franq": 0.5423361766915464,
+      "sentences": 5
+    },
+    {
+      "pubid": "12142826",
+      "mean_franq": 0.4996465661578373,
+      "sentences": 3
+    },
+    {
+      "pubid": "22382608",
+      "mean_franq": 0.5628680203942757,
+      "sentences": 5
+    },
+    {
+      "pubid": "17329379",
+      "mean_franq": 0.39585107265519875,
+      "sentences": 7
+    },
+    {
+      "pubid": "27288618",
+      "mean_franq": 0.4564756858775066,
+      "sentences": 11
+    },
+    {
+      "pubid": "21873082",
+      "mean_franq": 0.6662300305103489,
+      "sentences": 7
+    },
+    {
+      "pubid": "25810292",
+      "mean_franq": 0.5953020137001598,
+      "sentences": 3
+    },
+    {
+      "pubid": "21739621",
+      "mean_franq": 0.32911302769953127,
+      "sentences": 10
+    },
+    {
+      "pubid": "20073599",
+      "mean_franq": 0.6069961893252701,
+      "sentences": 4
+    },
+    {
+      "pubid": "21845457",
+      "mean_franq": 0.4155711423527375,
+      "sentences": 8
+    },
+    {
+      "pubid": "16216859",
+      "mean_franq": 0.6308810981380087,
+      "sentences": 4
+    },
+    {
+      "pubid": "19103915",
+      "mean_franq": 0.5082352512725604,
+      "sentences": 3
+    },
+    {
+      "pubid": "22521460",
+      "mean_franq": 0.406338306763008,
+      "sentences": 8
+    },
+    {
+      "pubid": "17062234",
+      "mean_franq": 0.4280496353975129,
+      "sentences": 8
+    },
+    {
+      "pubid": "26126304",
+      "mean_franq": 0.4705690446858949,
+      "sentences": 7
+    },
+    {
+      "pubid": "19578820",
+      "mean_franq": 0.5036612711684685,
+      "sentences": 4
+    },
+    {
+      "pubid": "21228436",
+      "mean_franq": 0.35943393697592857,
+      "sentences": 8
+    },
+    {
+      "pubid": "23972333",
+      "mean_franq": 0.49178627327054353,
+      "sentences": 6
+    },
+    {
+      "pubid": "23719685",
+      "mean_franq": 0.37070643385140895,
+      "sentences": 6
+    },
+    {
+      "pubid": "11601252",
+      "mean_franq": 0.4443917744433159,
+      "sentences": 9
+    },
+    {
+      "pubid": "23506394",
+      "mean_franq": 0.5126781446351079,
+      "sentences": 4
+    },
+    {
+      "pubid": "19575307",
+      "mean_franq": 0.3813015746026568,
+      "sentences": 5
+    },
+    {
+      "pubid": "11977907",
+      "mean_franq": 0.6795364665884396,
+      "sentences": 3
+    },
+    {
+      "pubid": "12626177",
+      "mean_franq": 0.34506242090711153,
+      "sentences": 6
+    },
+    {
+      "pubid": "15483019",
+      "mean_franq": 0.43981292335161554,
+      "sentences": 8
+    },
+    {
+      "pubid": "18693227",
+      "mean_franq": 0.30909592743155334,
+      "sentences": 10
+    },
+    {
+      "pubid": "27131771",
+      "mean_franq": 0.5135745480373067,
+      "sentences": 8
+    },
+    {
+      "pubid": "24783217",
+      "mean_franq": 0.5325847547732139,
+      "sentences": 5
+    },
+    {
+      "pubid": "17916877",
+      "mean_franq": 0.5470618967062416,
+      "sentences": 5
+    },
+    {
+      "pubid": "8375607",
+      "mean_franq": 0.5453481864024491,
+      "sentences": 3
+    },
+    {
+      "pubid": "11955750",
+      "mean_franq": 0.5070059759616112,
+      "sentences": 3
+    },
+    {
+      "pubid": "27040842",
+      "mean_franq": 0.4288798730242821,
+      "sentences": 8
+    },
+    {
+      "pubid": "17244100",
+      "mean_franq": 0.5997285959352865,
+      "sentences": 8
+    },
+    {
+      "pubid": "15708048",
+      "mean_franq": 0.37907663524134255,
+      "sentences": 12
+    },
+    {
+      "pubid": "11438275",
+      "mean_franq": 0.3318192866964672,
+      "sentences": 8
+    },
+    {
+      "pubid": "22513023",
+      "mean_franq": 0.3706457871947738,
+      "sentences": 9
+    },
+    {
+      "pubid": "27146470",
+      "mean_franq": 0.43338700775764305,
+      "sentences": 4
+    },
+    {
+      "pubid": "8165771",
+      "mean_franq": 0.47610025551885865,
+      "sentences": 7
+    },
+    {
+      "pubid": "23677366",
+      "mean_franq": 0.5328830700757489,
+      "sentences": 6
+    },
+    {
+      "pubid": "19237087",
+      "mean_franq": 0.3288989038266754,
+      "sentences": 6
+    },
+    {
+      "pubid": "10456814",
+      "mean_franq": 0.5164564136573823,
+      "sentences": 9
+    },
+    {
+      "pubid": "8921484",
+      "mean_franq": 0.41289066682035525,
+      "sentences": 7
+    },
+    {
+      "pubid": "16564683",
+      "mean_franq": 0.35293361435208226,
+      "sentences": 9
+    },
+    {
+      "pubid": "23147106",
+      "mean_franq": 0.48030851878567443,
+      "sentences": 6
+    },
+    {
+      "pubid": "21550158",
+      "mean_franq": 0.5285499945803824,
+      "sentences": 6
+    },
+    {
+      "pubid": "17559449",
+      "mean_franq": 0.3738503065421892,
+      "sentences": 5
+    }
+  ]
+}

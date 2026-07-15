@@ -1,0 +1,72 @@
+{
+  "config": {
+    "splitter": "sat",
+    "keywords": "keybert",
+    "nli": "roberta-large-mnli"
+  },
+  "answers": 10,
+  "sentences": 62,
+  "mean_sentences_per_answer": 6.2,
+  "verified_rate": 0.08064516129032258,
+  "hallucination_rate": 0.9193548387096774,
+  "rates": {
+    "verified": 0.08064516129032258,
+    "intrinsic": 0.016129032258064516,
+    "extrinsic": 0.24193548387096775,
+    "logical": 0.6612903225806451
+  },
+  "franq_factuality": 0.4491735321338252,
+  "keyword_grounding": 0.5060338407112601,
+  "per_answer": [
+    {
+      "pubid": "21645374",
+      "mean_franq": 0.5926925347195099,
+      "sentences": 6
+    },
+    {
+      "pubid": "16418930",
+      "mean_franq": 0.7008630351446037,
+      "sentences": 4
+    },
+    {
+      "pubid": "9488747",
+      "mean_franq": 0.38717880638955887,
+      "sentences": 12
+    },
+    {
+      "pubid": "17208539",
+      "mean_franq": 0.401098963748361,
+      "sentences": 6
+    },
+    {
+      "pubid": "10808977",
+      "mean_franq": 0.37632488998887903,
+      "sentences": 5
+    },
+    {
+      "pubid": "23831910",
+      "mean_franq": 0.4903992202969705,
+      "sentences": 5
+    },
+    {
+      "pubid": "26037986",
+      "mean_franq": 0.5196350837666273,
+      "sentences": 5
+    },
+    {
+      "pubid": "26852225",
+      "mean_franq": 0.37212502183494944,
+      "sentences": 7
+    },
+    {
+      "pubid": "17113061",
+      "mean_franq": 0.42650179443478975,
+      "sentences": 6
+    },
+    {
+      "pubid": "10966337",
+      "mean_franq": 0.39012171575350996,
+      "sentences": 6
+    }
+  ]
+}

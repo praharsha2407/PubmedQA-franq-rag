@@ -91,6 +91,7 @@ def run_advanced_pipeline(
     use_reranker: bool = False,
     constant_faithful_prior: bool = False,
     model_name: str | None = None,
+    evidence_k: int | None = None,
 ):
     # The baseline runs the CoT prompt; this pipeline defaults to the minimal one.
     # Comparing the two as-is confounds "better architecture" with "different prompt",
@@ -110,6 +111,13 @@ def run_advanced_pipeline(
     if model_name:
         config = replace(config, generation=replace(config.generation, model_name=model_name))
     print(f"Stage 7 generator: {config.generation.model_name}")
+
+    # How many retrieved chunks actually reach the generator (and the keyword corpus).
+    # Defaults to RerankerConfig.rerank_top_k (5). --evidence-k sweeps it: the pipeline never
+    # justified 5, and more evidence is not obviously better -- it also adds noise.
+    if evidence_k:
+        config = replace(config, reranker=replace(config.reranker, rerank_top_k=evidence_k))
+    print(f"Evidence depth: top-{config.reranker.rerank_top_k} chunks -> generator + keywords")
 
     print("Initializing Pipeline Models...")
     dense_retriever = DenseRetriever(config.retrieval)
@@ -169,7 +177,9 @@ def run_advanced_pipeline(
         "sparse_model": config.splade.model_name,
         "dense_model": config.retrieval.embedding_model,
         "final_top_k": config.hybrid_retrieval.final_top_k,
+        # = the evidence depth reaching the generator. Renamed in spirit by --evidence-k.
         "rerank_top_k": config.reranker.rerank_top_k,
+        "rrf_k": config.hybrid_retrieval.rrf_k,
         "faithfulness": "max_entailment_over_all_chunks",
         "p_true_given_faithful": (
             f"constant_{config.franq.p_true_given_faithful}" if constant_faithful_prior
@@ -438,10 +448,15 @@ if __name__ == "__main__":
              "the two systems ran DIFFERENT models and no past baseline-vs-advanced number was a "
              "clean architecture comparison. Pass the baseline's model here to hold it constant.",
     )
+    parser.add_argument(
+        "--evidence-k", type=int, default=None,
+        help="How many retrieved chunks reach the generator and the keyword corpus (default 5). "
+             "Sweep this to test whether more evidence helps or just adds noise.",
+    )
     args = parser.parse_args()
     run_advanced_pipeline(
         sample_size=args.sample_size, strict=args.strict, resume=args.resume,
         prompt_style=args.prompt, use_reranker=args.rerank,
         constant_faithful_prior=args.constant_faithful_prior,
-        model_name=args.model_name,
+        model_name=args.model_name, evidence_k=args.evidence_k,
     )

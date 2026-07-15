@@ -1,0 +1,72 @@
+{
+  "config": {
+    "splitter": "sat",
+    "keywords": "tfidf",
+    "nli": "facebook/bart-large-mnli"
+  },
+  "answers": 10,
+  "sentences": 62,
+  "mean_sentences_per_answer": 6.2,
+  "verified_rate": 0.0967741935483871,
+  "hallucination_rate": 0.9032258064516129,
+  "rates": {
+    "verified": 0.0967741935483871,
+    "intrinsic": 0.0,
+    "extrinsic": 0.24193548387096775,
+    "logical": 0.6612903225806451
+  },
+  "franq_factuality": 0.4683274255826543,
+  "keyword_grounding": 0.5309207817272333,
+  "per_answer": [
+    {
+      "pubid": "21645374",
+      "mean_franq": 0.6179126276904251,
+      "sentences": 6
+    },
+    {
+      "pubid": "16418930",
+      "mean_franq": 0.6577135488501535,
+      "sentences": 4
+    },
+    {
+      "pubid": "9488747",
+      "mean_franq": 0.4046835340289338,
+      "sentences": 12
+    },
+    {
+      "pubid": "17208539",
+      "mean_franq": 0.4276741097746763,
+      "sentences": 6
+    },
+    {
+      "pubid": "10808977",
+      "mean_franq": 0.3724537892577905,
+      "sentences": 5
+    },
+    {
+      "pubid": "23831910",
+      "mean_franq": 0.4865560774594268,
+      "sentences": 5
+    },
+    {
+      "pubid": "26037986",
+      "mean_franq": 0.480338126990331,
+      "sentences": 5
+    },
+    {
+      "pubid": "26852225",
+      "mean_franq": 0.38661618212246923,
+      "sentences": 7
+    },
+    {
+      "pubid": "17113061",
+      "mean_franq": 0.42022575927938516,
+      "sentences": 6
+    },
+    {
+      "pubid": "10966337",
+      "mean_franq": 0.5585525930858005,
+      "sentences": 6
+    }
+  ]
+}
